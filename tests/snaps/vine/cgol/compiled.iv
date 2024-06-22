@@ -1,0 +1,227 @@
+
+::main { ::cgol::main }
+
+::cgol::gens { 20 }
+
+::cgol::main {
+  fn(ref(n2 n1) _)
+  ::cgol::read_grid = fn(ref(n2 n8) tup(dup(n11 n21) tup(dup(n13 n22) dup(n15 n23))))
+  ::cgol::print_grid = fn(ref(n8 n19) fn(n11 fn(n13 fn(n15 _))))
+  x(n19 x(n1 x(n21 x(n22 x(n23 0))))) = ::cgol::main::1
+}
+
+::cgol::main::1 { x(n9 x(n4 x(n11 x(n12 x(n13 dup(@lt(::cgol::gens ?(::cgol::main::3 ::cgol::main::2 x(n9 x(n4 x(n11 x(n12 x(n13 n14))))))) n14)))))) }
+
+::cgol::main::2 {
+  x(n10 x(n20 x(dup(n3 dup(n13 n27)) x(dup(n5 dup(n15 n28)) x(n7 @add(1 n30))))))
+  ::cgol::update_grid = fn(n3 fn(n5 fn(ref(n7 dup(n17 n29)) _)))
+  ::cgol::print_grid = fn(ref(n10 n25) fn(n13 fn(n15 fn(n17 _))))
+  x(n25 x(n20 x(n27 x(n28 x(n29 n30))))) = ::cgol::main::1
+}
+
+::cgol::main::3 { x(n1 x(n1 x(_ x(_ x(_ _))))) }
+
+::cgol::update_grid {
+  fn(dup(n7 n12) fn(n8 fn(n9 _)))
+  x(n7 x(n8 x(n9 x(0 n13)))) = ::cgol::update_grid::1
+  x(n12 x(n13 ref(n5 n5))) = ::cgol::update_grid::7
+}
+
+::cgol::update_grid::1 { x(n7 x(dup(?(::cgol::update_grid::6 ::cgol::update_grid::2 x(n7 x(n8 x(n9 x(n10 n6))))) n8) x(n9 x(n10 n6)))) }
+
+::cgol::update_grid::2 {
+  x(dup(n49 n56) x(@sub(1 n57) x(tup(ref(n10 n9) n58) x(tup(n52 tup(n54 n43)) n42))))
+  ::cgol::finish_cell_update = fn(n23 _)
+  _ = _
+  _ = _
+  _ = _
+  x(n43 x(ref(n32 n32) x(ref(n10 n35) x(ref(n30 n30) x(0 x(ref(n34 n34) x(n49 x(0 x(n23 x(n52 x(ref(n26 n26) x(n54 ref(n28 n28))))))))))))) = ::cgol::update_grid::3
+  x(n56 x(n57 x(n58 x(ref(n35 n9) n42)))) = ::cgol::update_grid::1
+}
+
+::cgol::update_grid::3 { x(n15 x(n3 x(n17 x(n5 x(n19 x(n7 x(dup(?(::cgol::update_grid::5 ::cgol::update_grid::4 x(n15 x(n3 x(n17 x(n5 x(n19 x(n7 x(n21 x(n22 x(n10 x(n24 x(n12 x(n26 n14))))))))))))) n21) x(n22 x(n10 x(n24 x(n12 x(n26 n14)))))))))))) }
+
+::cgol::update_grid::4 {
+  x(tup(n80 n69) x(n57 x(tup(ref(n9 n5) n71) x(n59 x(n12 x(n61 x(@sub(1 n75) x(n14 x(n64 x(n15 x(n66 x(n16 n68))))))))))))
+  ::cgol::add_neigh = fn(ref(n9 n23) fn(n12 _))
+  tup(ref(n26 n18) tup(ref(n32 n20) ref(n38 n22))) = tup(n14 tup(n15 n16))
+  ::cgol::add_neigh = fn(ref(n23 n29) fn(ref(n26 n41) _))
+  ::cgol::add_neigh = fn(ref(n29 n35) fn(ref(n32 n44) _))
+  ::cgol::add_neigh = fn(ref(n35 n53) fn(ref(n38 n47) _))
+  ::cgol::finish_cell_update = fn(ref(n41 n18) _)
+  x(n69 x(n57 x(n71 x(n59 x(ref(n53 n5) x(n61 x(n75 x(ref(n44 n20) x(n64 x(ref(n47 n22) x(n66 x(n80 n68)))))))))))) = ::cgol::update_grid::3
+}
+
+::cgol::update_grid::5 { x(n1 x(n1 x(n3 x(n3 x(n5 x(n5 x(_ x(n8 x(n8 x(n10 x(n10 x(n12 n12)))))))))))) }
+
+::cgol::update_grid::6 { x(_ x(_ x(_ x(n4 n4)))) }
+
+::cgol::update_grid::7 { x(dup(?(::cgol::update_grid::9 ::cgol::update_grid::8 x(n5 x(n6 n4))) n5) x(n6 n4)) }
+
+::cgol::update_grid::8 {
+  x(@sub(1 n12) x(tup(n7 n13) n11))
+  ::cgol::finish_cell_update = fn(n7 _)
+  _ = _
+  x(n12 x(n13 n11)) = ::cgol::update_grid::7
+}
+
+::cgol::update_grid::9 { x(_ x(n2 n2)) }
+
+::cgol::add_neigh { fn(ref(dup(@u32_and(1 @mul(2 n18)) @add(n13 n1)) n1) fn(ref(dup(@u32_and(1 @mul(2 n13)) @add(n18 n3)) n3) _)) }
+
+::cgol::print_grid {
+  fn(ref(n12 n1) fn(n14 fn(n15 fn(n16 _))))
+  ::std::io::print_char = fn(ref(n7 n1) fn(10 _))
+  x(n12 x(n7 x(n14 x(n15 n16)))) = ::cgol::print_grid::1
+  _ = _
+  _ = _
+}
+
+::cgol::print_grid::1 { x(n7 x(n3 x(n9 x(dup(?(::cgol::print_grid::8 ::cgol::print_grid::2 x(n7 x(n3 x(n9 x(n10 n11))))) n10) n11)))) }
+
+::cgol::print_grid::2 {
+  x(n17 x(n13 x(dup(n20 n23) x(@sub(1 n24) tup(n19 n25)))))
+  ::std::io::print_char = fn(ref(n8 n21) fn(10 _))
+  x(n17 x(n8 x(n19 n20))) = ::cgol::print_grid::3
+  x(n21 x(n13 x(n23 x(n24 n25)))) = ::cgol::print_grid::1
+}
+
+::cgol::print_grid::3 { x(n6 x(n3 x(n8 dup(?(::cgol::print_grid::7 ::cgol::print_grid::4 x(n6 x(n3 x(n8 n9)))) n9)))) }
+
+::cgol::print_grid::4 {
+  x(n6 x(n14 x(tup(?(::cgol::print_grid::6 ::cgol::print_grid::5 n11) n20) @sub(1 n21))))
+  ::std::io::print_char = fn(ref(n6 n18) fn(n11 _))
+  x(n18 x(n14 x(n20 n21))) = ::cgol::print_grid::3
+}
+
+::cgol::print_grid::5 { 35 }
+
+::cgol::print_grid::6 { 46 }
+
+::cgol::print_grid::7 { x(n1 x(n1 x(_ _))) }
+
+::cgol::print_grid::8 { x(n1 x(n1 x(_ x(_ _)))) }
+
+::cgol::read_grid {
+  fn(ref(n24 n1) tup(n20 tup(n21 n22)))
+  ::cgol::end = fn(ref(n17 _) _)
+  x(n24 x(n1 x(0 x(n38 x(0 x(n40 x(ref(_ n22) x(n42 x(n32 x(n44 x(ref(_ n32) x(n45 x(0 dup(?(::cgol::read_grid::7 ::cgol::read_grid::6 x(n38 x(n20 x(n40 x(n21 x(n42 x(n17 x(n44 x(n45 x(n46 _)))))))))) n46)))))))))))))) = ::cgol::read_grid::1
+  _ = _
+}
+
+::cgol::read_grid::1 {
+  x(n0 x(n8 x(n23 x(n10 x(n25 x(n12 x(n27 x(n14 x(n29 x(n16 x(n31 x(n18 x(n33 n20)))))))))))))
+  ::std::io::read_byte = fn(ref(n0 n21) fn(0 dup(?(::cgol::read_grid::5 ::cgol::read_grid::2 x(n21 x(n8 x(n23 x(n10 x(n25 x(n12 x(n27 x(n14 x(n29 x(n16 x(n31 x(n18 x(n33 x(n20 n35))))))))))))))) n35)))
+}
+
+::cgol::read_grid::2 {
+  x(n33 x(n5 x(n19 x(n7 x(n21 x(n9 x(n23 x(n11 x(n25 x(n13 x(n27 x(n15 x(n29 x(n17 dup(@eq(10 ?(::cgol::read_grid::4 ::cgol::read_grid::3 x(n19 x(n35 x(n21 x(n37 x(n23 x(n39 x(n25 x(n41 x(n27 x(n43 x(n29 x(n45 x(n31 _))))))))))))))) n31)))))))))))))))
+  x(n33 x(n5 x(n35 x(n7 x(n37 x(n9 x(n39 x(n11 x(n41 x(n13 x(n43 x(n15 x(n45 n17))))))))))))) = ::cgol::read_grid::1
+}
+
+::cgol::read_grid::3 {
+  x(n0 x(n22 x(@add(1 n24) x(n24 x(n11 x(n26 x(n14 x(n28 x(n8 x(ref(_ n28) x(n2 x(0 x(_ _)))))))))))))
+  ::cgol::max = fn(n0 fn(n2 n22))
+  ::cgol::end = fn(ref(n8 _) _)
+  ::cgol::push = fn(ref(n11 n26) fn(n14 _))
+}
+
+::cgol::read_grid::4 {
+  x(n10 x(n10 x(n12 x(n12 x(n14 x(n14 x(n16 x(n16 x(n3 x(n18 x(@add(1 n20) x(n20 x(@eq(35 n7) _)))))))))))))
+  ::cgol::push = fn(ref(n3 n18) fn(n7 _))
+}
+
+::cgol::read_grid::5 { x(n1 x(n1 x(n3 x(n3 x(n5 x(n5 x(n7 x(n7 x(n9 x(n9 x(n11 x(n11 x(n13 x(n13 _)))))))))))))) }
+
+::cgol::read_grid::6 {
+  x(n0 x(n17 x(@add(1 n19) x(n19 x(n11 x(n21 x(n14 x(n8 x(n2 _)))))))))
+  ::cgol::max = fn(n0 fn(n2 n17))
+  ::cgol::end = fn(ref(n8 _) _)
+  ::cgol::push = fn(ref(n11 n21) fn(n14 _))
+}
+
+::cgol::read_grid::7 { x(n1 x(n1 x(n3 x(n3 x(n5 x(n5 x(_ x(_ x(_ _))))))))) }
+
+::cgol::max { fn(dup(@lt$(n3 ?(::cgol::max::2 ::cgol::max::1 x(n8 x(n9 n6)))) n8) fn(dup(n3 n9) n6)) }
+
+::cgol::max::1 { x(n3 x(_ n3)) }
+
+::cgol::max::2 { x(_ x(n3 n3)) }
+
+::cgol::finish_cell_update {
+  fn(ref(dup(@u32_shr(1 dup(n14 @le(3 n18))) @u32_and(1 n8)) n1) _)
+  3 = @sub(n8 @le(n14 @u32_and(n18 n1)))
+}
+
+::cgol::push {
+  fn(ref(ref(_ n5) ref(n13 n12)) fn(n6 _))
+  tup(ref(n10 n10) ref(n13 n12)) = ref(tup(n6 _) n5)
+}
+
+::cgol::end { fn(ref(ref(_ 0) _) _) }
+
+::std::io::println {
+  fn(ref(n3 n1) fn(n6 _))
+  ::std::io::print = fn(ref(n3 n8) fn(n6 _))
+  ::std::io::print_char = fn(ref(n8 n1) fn(10 _))
+}
+
+::std::io::print {
+  fn(ref(n11 n1) fn(tup(n13 fn(_ n14)) _))
+  x(n11 x(n1 x(n13 n14))) = ::std::io::print::1
+  _ = _
+}
+
+::std::io::print::1 { x(n6 x(n3 x(dup(?(::std::io::print::3 ::std::io::print::2 x(n6 x(n3 x(n8 n9)))) n8) n9))) }
+
+::std::io::print::2 {
+  x(n6 x(n12 x(@sub(1 n17) tup(n9 n18))))
+  ::std::io::print_char = fn(ref(n6 n15) fn(n9 _))
+  x(n15 x(n12 x(n17 n18))) = ::std::io::print::1
+}
+
+::std::io::print::3 { x(n1 x(n1 x(_ _))) }
+
+::std::io::print_char { fn(ref(@io_print_char(char io) io) fn(char _)) }
+
+::std::io::print_bytes {
+  fn(ref(n11 n1) fn(tup(n13 fn(_ n14)) _))
+  x(n11 x(n1 x(n13 n14))) = ::std::io::print_bytes::1
+  _ = _
+}
+
+::std::io::print_bytes::1 { x(n6 x(n3 x(dup(?(::std::io::print_bytes::3 ::std::io::print_bytes::2 x(n6 x(n3 x(n8 n9)))) n8) n9))) }
+
+::std::io::print_bytes::2 {
+  x(n6 x(n12 x(@sub(1 n17) tup(n9 n18))))
+  ::std::io::print_byte = fn(ref(n6 n15) fn(n9 _))
+  x(n15 x(n12 x(n17 n18))) = ::std::io::print_bytes::1
+}
+
+::std::io::print_bytes::3 { x(n1 x(n1 x(_ _))) }
+
+::std::io::print_byte { fn(ref(@io_print_byte(char io) io) fn(char _)) }
+
+::std::io::read_byte { fn(ref(dup(io0 @io_read_byte(default dup(byte @seq$(io0 io1)))) io1) fn(default byte)) }
+
+::std::str::concat { fn(tup(@add(n9 n10) fn(n15 n16)) fn(tup(n9 fn(n14 n15)) tup(n10 fn(n14 n16)))) }
+
+::std::u32::to_string { fn(dup(?(::std::u32::to_string::5 ::std::u32::to_string::1 x(n5 n3)) n5) n3) }
+
+::std::u32::to_string::1 {
+  x(n5 n4)
+  x(n5 x(tup(0 fn(n0 n0)) n4)) = ::std::u32::to_string::2
+}
+
+::std::u32::to_string::2 { x(dup(?(::std::u32::to_string::4 ::std::u32::to_string::3 x(n5 x(n6 n4))) n5) x(n6 n4)) }
+
+::std::u32::to_string::3 {
+  x(dup(@rem(10 n7) @div(10 n19)) x(tup(@add(1 n4) fn(n10 n11)) n18))
+  48 = @add(n7 n8)
+  x(n19 x(tup(n4 fn(n10 tup(n8 n11))) n18)) = ::std::u32::to_string::2
+}
+
+::std::u32::to_string::4 { x(_ x(n2 n2)) }
+
+::std::u32::to_string::5 { x(_ tup(1 fn(n0 tup(48 n0)))) }
+

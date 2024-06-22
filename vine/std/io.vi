@@ -33,3 +33,7 @@ fn print_bytes(&io, bytes) {
 inline_ivy! print_byte {
   fn(ref(@io_print_byte(char io) io) fn(char _))
 }
+
+inline_ivy! read_byte {
+  fn(ref(dup(io0 @io_read_byte(default dup(byte @seq$(io0 io1)))) io1) fn(default byte))
+}

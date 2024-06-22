@@ -186,6 +186,7 @@ impl Compiler {
             let body = slf.build_block(body);
             slf.erase(body);
             let start = slf.stage_tree(start);
+            slf.do_fin();
             slf.cur.steps.push(Step::Call(i, start));
             id
           });
@@ -371,7 +372,7 @@ impl Compiler {
 
     let res = f(self, id);
 
-    self.cur.steps.extend(take(&mut self.cur.fin).into_iter().rev());
+    self.do_fin();
 
     self.interfaces[interface].stages.push(id);
     for step in &self.cur.steps {
@@ -384,6 +385,10 @@ impl Compiler {
     self.cur_id = old_id;
 
     res
+  }
+
+  fn do_fin(&mut self) {
+    self.cur.steps.extend(take(&mut self.cur.fin).into_iter().rev());
   }
 
   fn new_local(&mut self) -> Local {

@@ -1,0 +1,143 @@
+
+use std::{io::{print_char, println, read_byte}, u32};
+
+const gens = 20;
+
+fn main(&io) {
+  let (width, height, grid) = io.read_grid();
+  io.print_grid(width, height, grid);
+  let gen = 0;
+  while gen < gens {
+    gen += 1;
+    update_grid(width, height, &grid);
+    io.print_grid(width, height, grid);
+  }
+}
+
+fn update_grid(width, height, grid) {
+  let prev_row = 0;
+  while height {
+    height -= 1;
+    let row_;
+    (row_, grid) = grid;
+    let &row__ = row_;
+    let row = &row__;
+    let prev_cell = 0;
+    let width = width;
+    let pr0 = 0;
+    let pr1;
+    let pr2;
+    (pr1, (pr2, prev_row)) = prev_row;
+    while width {
+      width -= 1;
+      let (&cell, rown) = row;
+      row = rown;
+      add_neigh(&cell, prev_cell);
+      let (&pr0i, &pr1i, &pr2i) = (pr0, pr1, pr2);
+      add_neigh(&cell, &pr0i);
+      add_neigh(&cell, &pr1i);
+      add_neigh(&cell, &pr2i);
+      finish_cell_update(&pr0i);
+      pr0 = &pr1i;
+      pr1 = &pr2i;
+      (pr2, prev_row) = prev_row;
+      prev_cell = &cell;
+    }
+    finish_cell_update(pr0);
+    let &_ = pr1;
+    let &_ = pr2;
+    let &_ = row;
+    let &_ = prev_row;
+    let &_ = prev_cell;
+    prev_row = &row__;
+  }
+  while width {
+    width -= 1;
+    let cell;
+    (cell, prev_row) = prev_row;
+    finish_cell_update(cell);
+  }
+  let &_ = prev_row;
+}
+
+fn add_neigh(&a, &b) {
+  let aa = (a & 1);
+  let ba = (b & 1);
+  a += ba * 2;
+  b += aa * 2;
+}
+
+fn print_grid(&io, width, height, grid) {
+  let row;
+  let cell;
+  while height {
+    height -= 1;
+    (row, grid) = grid;
+    let width = width;
+    while width {
+      width -= 1;
+      (cell, row) = row;
+      io.print_char(if cell { '#' } else { '.' })
+    }
+    io.print_char('\n');
+  }
+  io.print_char('\n');
+}
+
+fn read_grid(&io) {
+  let width = 0;
+  let height = 0;
+  let grid;
+  let grid_cursor = &grid;
+  let row;
+  let row_cursor = &row;
+  let col = 0;
+  let byte;
+  while { byte = io.read_byte(0); byte } {
+    if byte == '\n' {
+      width = max(width, col);
+      height = height + 1;
+      row_cursor.end();
+      grid_cursor.push(row);
+      row = _;
+      row_cursor = &row;
+      col = 0;
+    } else {
+      col += 1;
+      row_cursor.push(byte == '#');
+    }
+  }
+  if col {
+    width = max(width, col);
+    height = height + 1;
+    row_cursor.end();
+    grid_cursor.push(row);
+  }
+  grid_cursor.end();
+  ;(width, height, grid)
+}
+
+fn max(a, b) {
+  if a > b { a } else { b }
+}
+
+fn finish_cell_update(&cell) {
+  let neigh = cell >> 1;
+  let alive = cell & 1;
+  let min = 3 - alive;
+  let max = 3;
+  cell = min <= neigh <= max;
+}
+
+fn push(&a, v) {
+  let &c = a;
+  c = (v, _);
+  let (&_, &n) = &c;
+  a = &n;
+}
+
+fn end(&r) {
+  let &x = r;
+  x = 0;
+  r = _;
+}
