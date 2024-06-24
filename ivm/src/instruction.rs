@@ -45,6 +45,11 @@ impl<'ivm> Instructions<'ivm> {
   pub fn instructions(&self) -> &[Instruction<'ivm>] {
     &self.instructions
   }
+
+  #[inline(always)]
+  pub unsafe fn instructions_mut(&mut self) -> &mut Vec<Instruction<'ivm>> {
+    &mut self.instructions
+  }
 }
 
 /// An instruction to create a small sub-net.
@@ -113,14 +118,18 @@ impl<'ivm> IVM<'ivm> {
   /// `register.index() < self.registers.len()`
   #[inline]
   unsafe fn link_register(&mut self, register: Register, port: Port<'ivm>) {
-    debug_assert!(register.index() < self.registers.len());
-    let register = &mut *(&mut *self.registers as *mut [_] as *mut Option<Port<'ivm>>)
-      .byte_offset(register.byte_offset as isize);
+    let register = self.get_register(register);
     if let Some(got) = register.take() {
       self.link(port, got);
     } else {
       *register = Some(port);
     }
+  }
+
+  unsafe fn get_register(&mut self, register: Register) -> &mut Option<Port<'ivm>> {
+    debug_assert!(register.index() < self.registers.len());
+    &mut *(&mut *self.registers as *mut [_] as *mut Option<Port<'ivm>>)
+      .byte_offset(register.byte_offset as isize)
   }
 
   /// Execute [`Instructions`], linking the net's root to `port`.
@@ -137,6 +146,19 @@ impl<'ivm> IVM<'ivm> {
         match *i {
           Instruction::Nilary(r, ref p) => self.link_register(r, p.clone()),
           Instruction::Binary(tag, label, p0, p1, p2) => {
+            let r0p = &mut *(self.get_register(p0) as *mut Option<Port<'ivm>>);
+            if let Some(r0) = r0p {
+              *r0 = self.follow(r0.clone());
+              if r0.tag() == tag && r0.label() == label {
+                let (a, b) = r0.clone().aux();
+                self.link_register(p1, Port::new_wire(a));
+                self.link_register(p2, Port::new_wire(b));
+                *r0p = None;
+                self.stats.annihilate += 1;
+                self.stats.fast += 1;
+                continue;
+              }
+            }
             let node = self.new_node(tag, label);
             self.link_register(p0, node.0);
             self.link_register(p1, Port::new_wire(node.1));

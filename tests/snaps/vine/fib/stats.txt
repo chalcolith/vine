@@ -8,8 +8,9 @@ Interactions
   Expand                 2_281
   Call                   1_790
   Branch                   805
+  (Fast)                 7_177
 
 Memory
-  Heap                   1_072 B
-  Allocated            317_424 B
-  Freed                317_424 B
+  Heap                     800 B
+  Allocated            203_120 B
+  Freed                203_120 B

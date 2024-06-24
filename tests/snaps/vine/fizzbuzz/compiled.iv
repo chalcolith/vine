@@ -1,7 +1,7 @@
 
 ::main { ::fizzbuzz::main }
 
-::fizzbuzz::end { 100 }
+::fizzbuzz::end { 1000000 }
 
 ::fizzbuzz::main {
   fn(n3 _)

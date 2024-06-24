@@ -8,8 +8,9 @@ Interactions
   Expand             73_969_508
   Call              259_156_143
   Branch             21_860_298
+  (Fast)            322_638_956
 
 Memory
-  Heap                      832 B
-  Allocated      20_984_400_512 B
-  Freed          20_984_400_512 B
+  Heap                      512 B
+  Allocated      15_438_891_104 B
+  Freed          15_438_891_104 B

@@ -8,8 +8,9 @@ Interactions
   Expand                    12
   Call                      12
   Branch                     6
+  (Fast)                    12
 
 Memory
-  Heap                     128 B
-  Allocated              1_136 B
-  Freed                  1_136 B
+  Heap                      96 B
+  Allocated                864 B
+  Freed                    864 B

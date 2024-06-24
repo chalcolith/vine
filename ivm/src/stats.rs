@@ -17,6 +17,8 @@ pub struct Stats {
   pub call: u64,
   pub branch: u64,
 
+  pub fast: u64,
+
   /// The size of the heap, in words; a high water mark of memory usage.
   pub mem_heap: u64,
   /// The number of words allocated over the course of execution.
@@ -63,6 +65,7 @@ impl Display for Stats {
       ("  Expand", Some((self.expand, ""))),
       ("  Call", Some((self.call, ""))),
       ("  Branch", Some((self.branch, ""))),
+      ("  (Fast)", Some((self.fast, ""))),
       ("", None),
       ("Memory", None),
       ("  Heap", Some((self.mem_heap * 8, "B"))),

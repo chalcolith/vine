@@ -8,8 +8,9 @@ Interactions
   Expand               602_001
   Call               3_227_767
   Branch               275_619
+  (Fast)             4_020_918
 
 Memory
-  Heap                     864 B
-  Allocated        255_715_264 B
-  Freed            255_715_264 B
+  Heap                     560 B
+  Allocated        186_882_128 B
+  Freed            186_882_128 B

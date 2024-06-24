@@ -8,8 +8,9 @@ Interactions
   Expand             2_000_567
   Call               2_000_712
   Branch             1_000_290
+  (Fast)             4_001_182
 
 Memory
-  Heap                     624 B
-  Allocated        256_075_376 B
-  Freed            256_075_376 B
+  Heap                     368 B
+  Allocated        192_056_112 B
+  Freed            192_056_112 B

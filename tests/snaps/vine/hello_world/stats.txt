@@ -8,8 +8,9 @@ Interactions
   Expand                    46
   Call                      27
   Branch                    14
+  (Fast)                   148
 
 Memory
-  Heap                     512 B
-  Allocated              6_064 B
-  Freed                  6_064 B
+  Heap                     384 B
+  Allocated              3_696 B
+  Freed                  3_696 B

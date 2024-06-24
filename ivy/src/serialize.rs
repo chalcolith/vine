@@ -87,10 +87,12 @@ impl<'ast, 'ivm> Serializer<'ast, 'ivm> {
       }
     }
 
-    self.serialize_tree_to(&net.root, Register::ROOT);
-    for (a, b) in net.pairs.iter().rev() {
+    for (a, b) in net.pairs.iter() {
       self.serialize_pair(a, b);
     }
+    self.serialize_tree_to(&net.root, Register::ROOT);
+
+    unsafe { self.current.instructions.instructions_mut().reverse() }
   }
 
   fn serialize_pair(&mut self, a: &'ast Tree, b: &'ast Tree) {

@@ -8,8 +8,9 @@ Interactions
   Expand                   504
   Call                     362
   Branch                   193
+  (Fast)                 1_446
 
 Memory
-  Heap                     704 B
-  Allocated             67_728 B
-  Freed                 67_728 B
+  Heap                     512 B
+  Allocated             44_592 B
+  Freed                 44_592 B
