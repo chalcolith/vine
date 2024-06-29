@@ -1,7 +1,10 @@
 
 ::main { ::fizzbuzz::main }
 
-::fizzbuzz::end { 100 }
+::fizzbuzz::end {
+  n1
+  ::std::hint::black_box = fn(100 n1)
+}
 
 ::fizzbuzz::main {
   fn(n3 _)
@@ -35,6 +38,8 @@
 ::fizzbuzz::message::5 { tup(4 fn(n0 tup(70 tup(105 tup(122 tup(122 n0)))))) }
 
 ::fizzbuzz::message::6 { tup(8 fn(n0 tup(70 tup(105 tup(122 tup(122 tup(66 tup(117 tup(122 tup(122 n0)))))))))) }
+
+::std::hint::black_box { fn(x #black_box(x)) }
 
 ::std::io::println {
   fn(ref(n3 n1) fn(n6 _))

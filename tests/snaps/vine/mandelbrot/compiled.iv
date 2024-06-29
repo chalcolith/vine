@@ -1,11 +1,20 @@
 
 ::main { ::mandelbrot::main }
 
-::mandelbrot::max_iter { 128 }
+::mandelbrot::max_iter {
+  n1
+  ::std::hint::black_box = fn(128 n1)
+}
 
-::mandelbrot::width { 125 }
+::mandelbrot::width {
+  n1
+  ::std::hint::black_box = fn(125 n1)
+}
 
-::mandelbrot::height { 45 }
+::mandelbrot::height {
+  n1
+  ::std::hint::black_box = fn(45 n1)
+}
 
 ::mandelbrot::scale { +2.6 }
 
@@ -65,6 +74,8 @@
 }
 
 ::mandelbrot::mandelbrot::3 { x(_ x(_ x(_ x(_ x(_ x(_ x(n7 n7))))))) }
+
+::std::hint::black_box { fn(x #black_box(x)) }
 
 ::std::io::print_char { fn(ref(@io_print_char(char io) io) fn(char _)) }
 

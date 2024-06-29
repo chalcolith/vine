@@ -1,11 +1,20 @@
 
 ::main { ::mandelbrot_tga::main }
 
-::mandelbrot_tga::max_iter { 64 }
+::mandelbrot_tga::max_iter {
+  n1
+  ::std::hint::black_box = fn(64 n1)
+}
 
-::mandelbrot_tga::width { 1024 }
+::mandelbrot_tga::width {
+  n1
+  ::std::hint::black_box = fn(1024 n1)
+}
 
-::mandelbrot_tga::height { 1024 }
+::mandelbrot_tga::height {
+  n1
+  ::std::hint::black_box = fn(1024 n1)
+}
 
 ::mandelbrot_tga::scale { +2.6 }
 
@@ -63,6 +72,8 @@
 }
 
 ::mandelbrot_tga::mandelbrot::3 { x(_ x(_ x(_ x(_ x(_ x(_ x(n7 n7))))))) }
+
+::std::hint::black_box { fn(x #black_box(x)) }
 
 ::std::io::print_bytes {
   fn(ref(n11 n1) fn(tup(n13 fn(_ n14)) _))

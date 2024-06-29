@@ -1,7 +1,10 @@
 
 ::main { ::fib::main }
 
-::fib::end { 32 }
+::fib::end {
+  n1
+  ::std::hint::black_box = fn(32 n1)
+}
 
 ::fib::main {
   fn(n5 _)
@@ -23,6 +26,8 @@
 }
 
 ::fib::main::3 { _ }
+
+::std::hint::black_box { fn(x #black_box(x)) }
 
 ::std::io::println {
   fn(ref(n3 n1) fn(n6 _))

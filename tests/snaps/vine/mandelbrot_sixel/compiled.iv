@@ -1,11 +1,20 @@
 
 ::main { ::mandelbrot_sixel::main }
 
-::mandelbrot_sixel::max_iter { 50 }
+::mandelbrot_sixel::max_iter {
+  n1
+  ::std::hint::black_box = fn(50 n1)
+}
 
-::mandelbrot_sixel::width { 512 }
+::mandelbrot_sixel::width {
+  n1
+  ::std::hint::black_box = fn(512 n1)
+}
 
-::mandelbrot_sixel::height { 512 }
+::mandelbrot_sixel::height {
+  n1
+  ::std::hint::black_box = fn(512 n1)
+}
 
 ::mandelbrot_sixel::scale { +2.6 }
 
@@ -111,6 +120,8 @@
 }
 
 ::mandelbrot_sixel::mandelbrot::3 { x(_ x(_ x(_ x(_ x(_ x(_ x(n7 n7))))))) }
+
+::std::hint::black_box { fn(x #black_box(x)) }
 
 ::std::io::print_bytes {
   fn(ref(n11 n1) fn(tup(n13 fn(_ n14)) _))
