@@ -2,162 +2,63 @@
 ::main { ::mandelbrot_sixel::main }
 
 ::mandelbrot_sixel::max_iter {
-  n1
-  ::std::hint::black_box = fn(50 n1)
+  n0
+  n0 = #black_box(50)
 }
 
 ::mandelbrot_sixel::width {
-  n1
-  ::std::hint::black_box = fn(512 n1)
+  n0
+  n0 = #black_box(512)
 }
 
 ::mandelbrot_sixel::height {
-  n1
-  ::std::hint::black_box = fn(512 n1)
-}
-
-::mandelbrot_sixel::scale { +2.6 }
-
-::mandelbrot_sixel::center {
-  tup(n0 +0.0)
-  0 = @sub(+0.8 n0)
+  n0
+  n0 = #black_box(512)
 }
 
 ::mandelbrot_sixel::main {
-  fn(n1 _)
-  ::std::io::print_bytes = fn(ref(n1 n18) fn(tup(3 fn(n4 tup(27 tup(80 tup(113 n4))))) _))
-  ::std::io::print_bytes = fn(ref(n9 n14) fn(tup(2 fn(n12 tup(27 tup(92 n12)))) _))
-  ::std::io::flush = fn(ref(n14 _) _)
-  x(n18 x(n21 0)) = ::mandelbrot_sixel::main::1
-  x(n21 x(n9 x(0 1))) = ::mandelbrot_sixel::main::4
+  l0(@io_print_byte(27 @io_print_byte(80 @io_print_byte(113 @io_print_byte(35 @io_print_byte(48 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(48 @io_print_byte(59 @io_print_byte(48 @io_print_byte(59 @io_print_byte(48 @io_print_byte(35 @io_print_byte(49 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(49 @io_print_byte(59 @io_print_byte(49 @io_print_byte(59 @io_print_byte(49 @io_print_byte(35 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(35 @io_print_byte(51 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(51 @io_print_byte(59 @io_print_byte(51 @io_print_byte(59 @io_print_byte(51 @io_print_byte(35 @io_print_byte(52 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(52 @io_print_byte(59 @io_print_byte(52 @io_print_byte(59 @io_print_byte(52 @io_print_byte(35 @io_print_byte(53 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(53 @io_print_byte(59 @io_print_byte(53 @io_print_byte(59 @io_print_byte(53 @io_print_byte(35 @io_print_byte(54 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(54 @io_print_byte(59 @io_print_byte(54 @io_print_byte(59 @io_print_byte(54 @io_print_byte(35 @io_print_byte(55 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(55 @io_print_byte(59 @io_print_byte(55 @io_print_byte(59 @io_print_byte(55 @io_print_byte(35 @io_print_byte(56 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(56 @io_print_byte(59 @io_print_byte(56 @io_print_byte(59 @io_print_byte(56 @io_print_byte(35 @io_print_byte(57 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(57 @io_print_byte(59 @io_print_byte(57 @io_print_byte(59 @io_print_byte(57 @io_print_byte(35 @io_print_byte(49 @io_print_byte(48 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(49 @io_print_byte(48 @io_print_byte(59 @io_print_byte(49 @io_print_byte(48 @io_print_byte(59 @io_print_byte(49 @io_print_byte(48 @io_print_byte(35 @io_print_byte(49 @io_print_byte(49 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(49 @io_print_byte(49 @io_print_byte(59 @io_print_byte(49 @io_print_byte(49 @io_print_byte(59 @io_print_byte(49 @io_print_byte(49 @io_print_byte(35 @io_print_byte(49 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(49 @io_print_byte(50 @io_print_byte(59 @io_print_byte(49 @io_print_byte(50 @io_print_byte(59 @io_print_byte(49 @io_print_byte(50 @io_print_byte(35 @io_print_byte(49 @io_print_byte(51 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(49 @io_print_byte(51 @io_print_byte(59 @io_print_byte(49 @io_print_byte(51 @io_print_byte(59 @io_print_byte(49 @io_print_byte(51 @io_print_byte(35 @io_print_byte(49 @io_print_byte(52 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(49 @io_print_byte(52 @io_print_byte(59 @io_print_byte(49 @io_print_byte(52 @io_print_byte(59 @io_print_byte(49 @io_print_byte(52 @io_print_byte(35 @io_print_byte(49 @io_print_byte(53 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(49 @io_print_byte(53 @io_print_byte(59 @io_print_byte(49 @io_print_byte(53 @io_print_byte(59 @io_print_byte(49 @io_print_byte(53 @io_print_byte(35 @io_print_byte(49 @io_print_byte(54 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(49 @io_print_byte(54 @io_print_byte(59 @io_print_byte(49 @io_print_byte(54 @io_print_byte(59 @io_print_byte(49 @io_print_byte(54 @io_print_byte(35 @io_print_byte(49 @io_print_byte(55 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(49 @io_print_byte(55 @io_print_byte(59 @io_print_byte(49 @io_print_byte(55 @io_print_byte(59 @io_print_byte(49 @io_print_byte(55 @io_print_byte(35 @io_print_byte(49 @io_print_byte(56 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(49 @io_print_byte(56 @io_print_byte(59 @io_print_byte(49 @io_print_byte(56 @io_print_byte(59 @io_print_byte(49 @io_print_byte(56 @io_print_byte(35 @io_print_byte(49 @io_print_byte(57 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(49 @io_print_byte(57 @io_print_byte(59 @io_print_byte(49 @io_print_byte(57 @io_print_byte(59 @io_print_byte(49 @io_print_byte(57 @io_print_byte(35 @io_print_byte(50 @io_print_byte(48 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(48 @io_print_byte(59 @io_print_byte(50 @io_print_byte(48 @io_print_byte(59 @io_print_byte(50 @io_print_byte(48 @io_print_byte(35 @io_print_byte(50 @io_print_byte(49 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(49 @io_print_byte(59 @io_print_byte(50 @io_print_byte(49 @io_print_byte(59 @io_print_byte(50 @io_print_byte(49 @io_print_byte(35 @io_print_byte(50 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(50 @io_print_byte(35 @io_print_byte(50 @io_print_byte(51 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(51 @io_print_byte(59 @io_print_byte(50 @io_print_byte(51 @io_print_byte(59 @io_print_byte(50 @io_print_byte(51 @io_print_byte(35 @io_print_byte(50 @io_print_byte(52 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(52 @io_print_byte(59 @io_print_byte(50 @io_print_byte(52 @io_print_byte(59 @io_print_byte(50 @io_print_byte(52 @io_print_byte(35 @io_print_byte(50 @io_print_byte(53 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(53 @io_print_byte(59 @io_print_byte(50 @io_print_byte(53 @io_print_byte(59 @io_print_byte(50 @io_print_byte(53 @io_print_byte(35 @io_print_byte(50 @io_print_byte(54 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(54 @io_print_byte(59 @io_print_byte(50 @io_print_byte(54 @io_print_byte(59 @io_print_byte(50 @io_print_byte(54 @io_print_byte(35 @io_print_byte(50 @io_print_byte(55 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(55 @io_print_byte(59 @io_print_byte(50 @io_print_byte(55 @io_print_byte(59 @io_print_byte(50 @io_print_byte(55 @io_print_byte(35 @io_print_byte(50 @io_print_byte(56 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(56 @io_print_byte(59 @io_print_byte(50 @io_print_byte(56 @io_print_byte(59 @io_print_byte(50 @io_print_byte(56 @io_print_byte(35 @io_print_byte(50 @io_print_byte(57 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(57 @io_print_byte(59 @io_print_byte(50 @io_print_byte(57 @io_print_byte(59 @io_print_byte(50 @io_print_byte(57 @io_print_byte(35 @io_print_byte(51 @io_print_byte(48 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(51 @io_print_byte(48 @io_print_byte(59 @io_print_byte(51 @io_print_byte(48 @io_print_byte(59 @io_print_byte(51 @io_print_byte(48 @io_print_byte(35 @io_print_byte(51 @io_print_byte(49 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(51 @io_print_byte(49 @io_print_byte(59 @io_print_byte(51 @io_print_byte(49 @io_print_byte(59 @io_print_byte(51 @io_print_byte(49 @io_print_byte(35 @io_print_byte(51 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(51 @io_print_byte(50 @io_print_byte(59 @io_print_byte(51 @io_print_byte(50 @io_print_byte(59 @io_print_byte(51 @io_print_byte(50 @io_print_byte(35 @io_print_byte(51 @io_print_byte(51 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(51 @io_print_byte(51 @io_print_byte(59 @io_print_byte(51 @io_print_byte(51 @io_print_byte(59 @io_print_byte(51 @io_print_byte(51 @io_print_byte(35 @io_print_byte(51 @io_print_byte(52 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(51 @io_print_byte(52 @io_print_byte(59 @io_print_byte(51 @io_print_byte(52 @io_print_byte(59 @io_print_byte(51 @io_print_byte(52 @io_print_byte(35 @io_print_byte(51 @io_print_byte(53 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(51 @io_print_byte(53 @io_print_byte(59 @io_print_byte(51 @io_print_byte(53 @io_print_byte(59 @io_print_byte(51 @io_print_byte(53 @io_print_byte(35 @io_print_byte(51 @io_print_byte(54 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(51 @io_print_byte(54 @io_print_byte(59 @io_print_byte(51 @io_print_byte(54 @io_print_byte(59 @io_print_byte(51 @io_print_byte(54 @io_print_byte(35 @io_print_byte(51 @io_print_byte(55 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(51 @io_print_byte(55 @io_print_byte(59 @io_print_byte(51 @io_print_byte(55 @io_print_byte(59 @io_print_byte(51 @io_print_byte(55 @io_print_byte(35 @io_print_byte(51 @io_print_byte(56 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(51 @io_print_byte(56 @io_print_byte(59 @io_print_byte(51 @io_print_byte(56 @io_print_byte(59 @io_print_byte(51 @io_print_byte(56 @io_print_byte(35 @io_print_byte(51 @io_print_byte(57 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(51 @io_print_byte(57 @io_print_byte(59 @io_print_byte(51 @io_print_byte(57 @io_print_byte(59 @io_print_byte(51 @io_print_byte(57 @io_print_byte(35 @io_print_byte(52 @io_print_byte(48 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(52 @io_print_byte(48 @io_print_byte(59 @io_print_byte(52 @io_print_byte(48 @io_print_byte(59 @io_print_byte(52 @io_print_byte(48 @io_print_byte(35 @io_print_byte(52 @io_print_byte(49 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(52 @io_print_byte(49 @io_print_byte(59 @io_print_byte(52 @io_print_byte(49 @io_print_byte(59 @io_print_byte(52 @io_print_byte(49 @io_print_byte(35 @io_print_byte(52 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(52 @io_print_byte(50 @io_print_byte(59 @io_print_byte(52 @io_print_byte(50 @io_print_byte(59 @io_print_byte(52 @io_print_byte(50 @io_print_byte(35 @io_print_byte(52 @io_print_byte(51 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(52 @io_print_byte(51 @io_print_byte(59 @io_print_byte(52 @io_print_byte(51 @io_print_byte(59 @io_print_byte(52 @io_print_byte(51 @io_print_byte(35 @io_print_byte(52 @io_print_byte(52 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(52 @io_print_byte(52 @io_print_byte(59 @io_print_byte(52 @io_print_byte(52 @io_print_byte(59 @io_print_byte(52 @io_print_byte(52 @io_print_byte(35 @io_print_byte(52 @io_print_byte(53 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(52 @io_print_byte(53 @io_print_byte(59 @io_print_byte(52 @io_print_byte(53 @io_print_byte(59 @io_print_byte(52 @io_print_byte(53 @io_print_byte(35 @io_print_byte(52 @io_print_byte(54 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(52 @io_print_byte(54 @io_print_byte(59 @io_print_byte(52 @io_print_byte(54 @io_print_byte(59 @io_print_byte(52 @io_print_byte(54 @io_print_byte(35 @io_print_byte(52 @io_print_byte(55 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(52 @io_print_byte(55 @io_print_byte(59 @io_print_byte(52 @io_print_byte(55 @io_print_byte(59 @io_print_byte(52 @io_print_byte(55 @io_print_byte(35 @io_print_byte(52 @io_print_byte(56 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(52 @io_print_byte(56 @io_print_byte(59 @io_print_byte(52 @io_print_byte(56 @io_print_byte(59 @io_print_byte(52 @io_print_byte(56 @io_print_byte(35 @io_print_byte(52 @io_print_byte(57 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(52 @io_print_byte(57 @io_print_byte(59 @io_print_byte(52 @io_print_byte(57 @io_print_byte(59 @io_print_byte(52 @io_print_byte(57 @io_print_byte(35 @io_print_byte(53 @io_print_byte(48 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(53 @io_print_byte(48 @io_print_byte(59 @io_print_byte(53 @io_print_byte(48 @io_print_byte(59 @io_print_byte(53 @io_print_byte(48 @io_print_byte(35 @io_print_byte(53 @io_print_byte(49 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(53 @io_print_byte(49 @io_print_byte(59 @io_print_byte(53 @io_print_byte(49 @io_print_byte(59 @io_print_byte(53 @io_print_byte(49 @io_print_byte(35 @io_print_byte(53 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(53 @io_print_byte(50 @io_print_byte(59 @io_print_byte(53 @io_print_byte(50 @io_print_byte(59 @io_print_byte(53 @io_print_byte(50 @io_print_byte(35 @io_print_byte(53 @io_print_byte(51 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(53 @io_print_byte(51 @io_print_byte(59 @io_print_byte(53 @io_print_byte(51 @io_print_byte(59 @io_print_byte(53 @io_print_byte(51 @io_print_byte(35 @io_print_byte(53 @io_print_byte(52 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(53 @io_print_byte(52 @io_print_byte(59 @io_print_byte(53 @io_print_byte(52 @io_print_byte(59 @io_print_byte(53 @io_print_byte(52 @io_print_byte(35 @io_print_byte(53 @io_print_byte(53 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(53 @io_print_byte(53 @io_print_byte(59 @io_print_byte(53 @io_print_byte(53 @io_print_byte(59 @io_print_byte(53 @io_print_byte(53 @io_print_byte(35 @io_print_byte(53 @io_print_byte(54 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(53 @io_print_byte(54 @io_print_byte(59 @io_print_byte(53 @io_print_byte(54 @io_print_byte(59 @io_print_byte(53 @io_print_byte(54 @io_print_byte(35 @io_print_byte(53 @io_print_byte(55 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(53 @io_print_byte(55 @io_print_byte(59 @io_print_byte(53 @io_print_byte(55 @io_print_byte(59 @io_print_byte(53 @io_print_byte(55 @io_print_byte(35 @io_print_byte(53 @io_print_byte(56 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(53 @io_print_byte(56 @io_print_byte(59 @io_print_byte(53 @io_print_byte(56 @io_print_byte(59 @io_print_byte(53 @io_print_byte(56 @io_print_byte(35 @io_print_byte(53 @io_print_byte(57 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(53 @io_print_byte(57 @io_print_byte(59 @io_print_byte(53 @io_print_byte(57 @io_print_byte(59 @io_print_byte(53 @io_print_byte(57 @io_print_byte(35 @io_print_byte(54 @io_print_byte(48 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(54 @io_print_byte(48 @io_print_byte(59 @io_print_byte(54 @io_print_byte(48 @io_print_byte(59 @io_print_byte(54 @io_print_byte(48 @io_print_byte(35 @io_print_byte(54 @io_print_byte(49 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(54 @io_print_byte(49 @io_print_byte(59 @io_print_byte(54 @io_print_byte(49 @io_print_byte(59 @io_print_byte(54 @io_print_byte(49 @io_print_byte(35 @io_print_byte(54 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(54 @io_print_byte(50 @io_print_byte(59 @io_print_byte(54 @io_print_byte(50 @io_print_byte(59 @io_print_byte(54 @io_print_byte(50 @io_print_byte(35 @io_print_byte(54 @io_print_byte(51 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(54 @io_print_byte(51 @io_print_byte(59 @io_print_byte(54 @io_print_byte(51 @io_print_byte(59 @io_print_byte(54 @io_print_byte(51 @io_print_byte(35 @io_print_byte(54 @io_print_byte(52 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(54 @io_print_byte(52 @io_print_byte(59 @io_print_byte(54 @io_print_byte(52 @io_print_byte(59 @io_print_byte(54 @io_print_byte(52 @io_print_byte(35 @io_print_byte(54 @io_print_byte(53 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(54 @io_print_byte(53 @io_print_byte(59 @io_print_byte(54 @io_print_byte(53 @io_print_byte(59 @io_print_byte(54 @io_print_byte(53 @io_print_byte(35 @io_print_byte(54 @io_print_byte(54 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(54 @io_print_byte(54 @io_print_byte(59 @io_print_byte(54 @io_print_byte(54 @io_print_byte(59 @io_print_byte(54 @io_print_byte(54 @io_print_byte(35 @io_print_byte(54 @io_print_byte(55 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(54 @io_print_byte(55 @io_print_byte(59 @io_print_byte(54 @io_print_byte(55 @io_print_byte(59 @io_print_byte(54 @io_print_byte(55 @io_print_byte(35 @io_print_byte(54 @io_print_byte(56 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(54 @io_print_byte(56 @io_print_byte(59 @io_print_byte(54 @io_print_byte(56 @io_print_byte(59 @io_print_byte(54 @io_print_byte(56 @io_print_byte(35 @io_print_byte(54 @io_print_byte(57 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(54 @io_print_byte(57 @io_print_byte(59 @io_print_byte(54 @io_print_byte(57 @io_print_byte(59 @io_print_byte(54 @io_print_byte(57 @io_print_byte(35 @io_print_byte(55 @io_print_byte(48 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(55 @io_print_byte(48 @io_print_byte(59 @io_print_byte(55 @io_print_byte(48 @io_print_byte(59 @io_print_byte(55 @io_print_byte(48 @io_print_byte(35 @io_print_byte(55 @io_print_byte(49 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(55 @io_print_byte(49 @io_print_byte(59 @io_print_byte(55 @io_print_byte(49 @io_print_byte(59 @io_print_byte(55 @io_print_byte(49 @io_print_byte(35 @io_print_byte(55 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(55 @io_print_byte(50 @io_print_byte(59 @io_print_byte(55 @io_print_byte(50 @io_print_byte(59 @io_print_byte(55 @io_print_byte(50 @io_print_byte(35 @io_print_byte(55 @io_print_byte(51 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(55 @io_print_byte(51 @io_print_byte(59 @io_print_byte(55 @io_print_byte(51 @io_print_byte(59 @io_print_byte(55 @io_print_byte(51 @io_print_byte(35 @io_print_byte(55 @io_print_byte(52 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(55 @io_print_byte(52 @io_print_byte(59 @io_print_byte(55 @io_print_byte(52 @io_print_byte(59 @io_print_byte(55 @io_print_byte(52 @io_print_byte(35 @io_print_byte(55 @io_print_byte(53 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(55 @io_print_byte(53 @io_print_byte(59 @io_print_byte(55 @io_print_byte(53 @io_print_byte(59 @io_print_byte(55 @io_print_byte(53 @io_print_byte(35 @io_print_byte(55 @io_print_byte(54 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(55 @io_print_byte(54 @io_print_byte(59 @io_print_byte(55 @io_print_byte(54 @io_print_byte(59 @io_print_byte(55 @io_print_byte(54 @io_print_byte(35 @io_print_byte(55 @io_print_byte(55 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(55 @io_print_byte(55 @io_print_byte(59 @io_print_byte(55 @io_print_byte(55 @io_print_byte(59 @io_print_byte(55 @io_print_byte(55 @io_print_byte(35 @io_print_byte(55 @io_print_byte(56 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(55 @io_print_byte(56 @io_print_byte(59 @io_print_byte(55 @io_print_byte(56 @io_print_byte(59 @io_print_byte(55 @io_print_byte(56 @io_print_byte(35 @io_print_byte(55 @io_print_byte(57 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(55 @io_print_byte(57 @io_print_byte(59 @io_print_byte(55 @io_print_byte(57 @io_print_byte(59 @io_print_byte(55 @io_print_byte(57 @io_print_byte(35 @io_print_byte(56 @io_print_byte(48 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(56 @io_print_byte(48 @io_print_byte(59 @io_print_byte(56 @io_print_byte(48 @io_print_byte(59 @io_print_byte(56 @io_print_byte(48 @io_print_byte(35 @io_print_byte(56 @io_print_byte(49 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(56 @io_print_byte(49 @io_print_byte(59 @io_print_byte(56 @io_print_byte(49 @io_print_byte(59 @io_print_byte(56 @io_print_byte(49 @io_print_byte(35 @io_print_byte(56 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(56 @io_print_byte(50 @io_print_byte(59 @io_print_byte(56 @io_print_byte(50 @io_print_byte(59 @io_print_byte(56 @io_print_byte(50 @io_print_byte(35 @io_print_byte(56 @io_print_byte(51 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(56 @io_print_byte(51 @io_print_byte(59 @io_print_byte(56 @io_print_byte(51 @io_print_byte(59 @io_print_byte(56 @io_print_byte(51 @io_print_byte(35 @io_print_byte(56 @io_print_byte(52 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(56 @io_print_byte(52 @io_print_byte(59 @io_print_byte(56 @io_print_byte(52 @io_print_byte(59 @io_print_byte(56 @io_print_byte(52 @io_print_byte(35 @io_print_byte(56 @io_print_byte(53 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(56 @io_print_byte(53 @io_print_byte(59 @io_print_byte(56 @io_print_byte(53 @io_print_byte(59 @io_print_byte(56 @io_print_byte(53 @io_print_byte(35 @io_print_byte(56 @io_print_byte(54 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(56 @io_print_byte(54 @io_print_byte(59 @io_print_byte(56 @io_print_byte(54 @io_print_byte(59 @io_print_byte(56 @io_print_byte(54 @io_print_byte(35 @io_print_byte(56 @io_print_byte(55 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(56 @io_print_byte(55 @io_print_byte(59 @io_print_byte(56 @io_print_byte(55 @io_print_byte(59 @io_print_byte(56 @io_print_byte(55 @io_print_byte(35 @io_print_byte(56 @io_print_byte(56 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(56 @io_print_byte(56 @io_print_byte(59 @io_print_byte(56 @io_print_byte(56 @io_print_byte(59 @io_print_byte(56 @io_print_byte(56 @io_print_byte(35 @io_print_byte(56 @io_print_byte(57 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(56 @io_print_byte(57 @io_print_byte(59 @io_print_byte(56 @io_print_byte(57 @io_print_byte(59 @io_print_byte(56 @io_print_byte(57 @io_print_byte(35 @io_print_byte(57 @io_print_byte(48 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(57 @io_print_byte(48 @io_print_byte(59 @io_print_byte(57 @io_print_byte(48 @io_print_byte(59 @io_print_byte(57 @io_print_byte(48 @io_print_byte(35 @io_print_byte(57 @io_print_byte(49 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(57 @io_print_byte(49 @io_print_byte(59 @io_print_byte(57 @io_print_byte(49 @io_print_byte(59 @io_print_byte(57 @io_print_byte(49 @io_print_byte(35 @io_print_byte(57 @io_print_byte(50 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(57 @io_print_byte(50 @io_print_byte(59 @io_print_byte(57 @io_print_byte(50 @io_print_byte(59 @io_print_byte(57 @io_print_byte(50 @io_print_byte(35 @io_print_byte(57 @io_print_byte(51 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(57 @io_print_byte(51 @io_print_byte(59 @io_print_byte(57 @io_print_byte(51 @io_print_byte(59 @io_print_byte(57 @io_print_byte(51 @io_print_byte(35 @io_print_byte(57 @io_print_byte(52 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(57 @io_print_byte(52 @io_print_byte(59 @io_print_byte(57 @io_print_byte(52 @io_print_byte(59 @io_print_byte(57 @io_print_byte(52 @io_print_byte(35 @io_print_byte(57 @io_print_byte(53 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(57 @io_print_byte(53 @io_print_byte(59 @io_print_byte(57 @io_print_byte(53 @io_print_byte(59 @io_print_byte(57 @io_print_byte(53 @io_print_byte(35 @io_print_byte(57 @io_print_byte(54 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(57 @io_print_byte(54 @io_print_byte(59 @io_print_byte(57 @io_print_byte(54 @io_print_byte(59 @io_print_byte(57 @io_print_byte(54 @io_print_byte(35 @io_print_byte(57 @io_print_byte(55 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(57 @io_print_byte(55 @io_print_byte(59 @io_print_byte(57 @io_print_byte(55 @io_print_byte(59 @io_print_byte(57 @io_print_byte(55 @io_print_byte(35 @io_print_byte(57 @io_print_byte(56 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(57 @io_print_byte(56 @io_print_byte(59 @io_print_byte(57 @io_print_byte(56 @io_print_byte(59 @io_print_byte(57 @io_print_byte(56 @io_print_byte(35 @io_print_byte(57 @io_print_byte(57 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(57 @io_print_byte(57 @io_print_byte(59 @io_print_byte(57 @io_print_byte(57 @io_print_byte(59 @io_print_byte(57 @io_print_byte(57 @io_print_byte(35 @io_print_byte(49 @io_print_byte(48 @io_print_byte(48 @io_print_byte(59 @io_print_byte(50 @io_print_byte(59 @io_print_byte(49 @io_print_byte(48 @io_print_byte(48 @io_print_byte(59 @io_print_byte(49 @io_print_byte(48 @io_print_byte(48 @io_print_byte(59 @io_print_byte(49 @io_print_byte(48 @io_print_byte(48 n0))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) _)
+  @lt$(0 ?(::mandelbrot_sixel::main::13 ::mandelbrot_sixel::main::5 l2(n0 l2(@io_print_byte(27 @io_print_byte(92 @io_flush(0 _))) l2(0 1))))) = #black_box(512)
 }
-
-::mandelbrot_sixel::main::1 { x(n6 x(n4 dup(@le(100 ?(::mandelbrot_sixel::main::3 ::mandelbrot_sixel::main::2 x(n6 x(n4 n8)))) n8))) }
-
-::mandelbrot_sixel::main::2 {
-  x(n0 x(n52 dup(n7 dup(n25 dup(n35 dup(n45 @add(1 n56)))))))
-  ::std::io::print_byte = fn(ref(n0 n4) fn(35 _))
-  ::std::io::print_bytes = fn(ref(n4 n10) fn(n8 _))
-  ::std::u32::to_string = fn(n7 n8)
-  ::std::io::print_byte = fn(ref(n10 n14) fn(59 _))
-  ::std::io::print_byte = fn(ref(n14 n18) fn(50 _))
-  ::std::io::print_byte = fn(ref(n18 n22) fn(59 _))
-  ::std::io::print_bytes = fn(ref(n22 n28) fn(n26 _))
-  ::std::u32::to_string = fn(n25 n26)
-  ::std::io::print_byte = fn(ref(n28 n32) fn(59 _))
-  ::std::io::print_bytes = fn(ref(n32 n38) fn(n36 _))
-  ::std::u32::to_string = fn(n35 n36)
-  ::std::io::print_byte = fn(ref(n38 n42) fn(59 _))
-  ::std::io::print_bytes = fn(ref(n42 n54) fn(n46 _))
-  ::std::u32::to_string = fn(n45 n46)
-  x(n54 x(n52 n56)) = ::mandelbrot_sixel::main::1
-}
-
-::mandelbrot_sixel::main::3 { x(n1 x(n1 _)) }
-
-::mandelbrot_sixel::main::4 { x(n7 x(n4 x(dup(@lt(::mandelbrot_sixel::height ?(::mandelbrot_sixel::main::13 ::mandelbrot_sixel::main::5 x(n7 x(n4 x(n9 n10))))) n9) n10))) }
 
 ::mandelbrot_sixel::main::5 {
-  x(n2 x(n39 x(dup(n44 @add(1 n55)) dup(n45 dup(n21 @mul(2 dup(@lt$(32 ?(::mandelbrot_sixel::main::12 ::mandelbrot_sixel::main::11 x(n50 x(n56 n33)))) n50)))))))
-  ::std::io::print_bytes = fn(ref(n2 n42) fn(tup(2 fn(n5 tup(35 tup(48 n5)))) _))
-  ::std::io::print_byte = fn(ref(n8 n12) fn(33 _))
-  ::std::io::print_bytes = fn(ref(n12 n18) fn(n16 _))
-  ::std::u32::to_string = fn(n15 n16)
-  ::std::io::print_byte = fn(ref(n18 n27) fn(n22 _))
-  63 = @add(n21 n22)
-  ::std::io::print_byte = fn(ref(n27 n53) fn(n33 _))
-  x(n42 x(n8 x(n44 x(n45 x(0 x(0 x(n15 0))))))) = ::mandelbrot_sixel::main::6
-  x(n53 x(n39 x(n55 n56))) = ::mandelbrot_sixel::main::4
+  l2(@io_print_byte(35 @io_print_byte(48 n0)) l2(n1 l2(l4(n2 @add(1 l4(@lt(::mandelbrot_sixel::height ?(::mandelbrot_sixel::main::13 ::mandelbrot_sixel::main::5 l2(n3 l2(n1 l2(n4 n5))))) n4))) l4(n6 l4(@add$(63 n7) @mul(2 l4(@lt$(32 ?(::mandelbrot_sixel::main::12 ::mandelbrot_sixel::main::11 l2(n8 l2(n5 n9)))) n8)))))))
+  @lt$(0 ?(::mandelbrot_sixel::main::10 ::mandelbrot_sixel::main::7 l2(n0 l2(@io_print_byte(33 n10) l2(n2 l2(n6 l2(0 l2(0 l2(l4(?(::std::u32::to_string::5 ::std::u32::to_string::1 l2(n11 l1(l4(?(::std::io::print_bytes::3 ::std::io::print_bytes::2 l2(n10 l2(@io_print_byte(n7 @io_print_byte(n9 n3)) l2(n12 n13)))) n12) l0(_ n13)))) n11) 0))))))))) = #black_box(512)
 }
-
-::mandelbrot_sixel::main::6 { x(n11 x(n4 x(n13 x(n14 x(n15 x(n16 x(n9 dup(@lt(::mandelbrot_sixel::width ?(::mandelbrot_sixel::main::10 ::mandelbrot_sixel::main::7 x(n11 x(n4 x(n13 x(n14 x(n15 x(n16 x(n9 n18))))))))) n18)))))))) }
 
 ::mandelbrot_sixel::main::7 {
-  x(n33 x(n26 x(dup(n2 n41) x(dup(n35 n42) x(n16 x(n36 x(n31 dup(n1 @add(1 n46)))))))))
-  ::mandelbrot_sixel::scale = @div(::mandelbrot_sixel::width @mul(n5 n6))
-  tup(n1 n2) = @add(+0.5 @sub(n4 n5))
-  tup(::mandelbrot_sixel::width ::mandelbrot_sixel::height) = @div(+2.0 n4)
-  ::mandelbrot_sixel::center = @add(n6 tup(n10 n12))
-  ::mandelbrot_sixel::mandelbrot = fn(n10 fn(n12 dup(@ne(n16 ?(::mandelbrot_sixel::main::9 ::mandelbrot_sixel::main::8 x(n33 x(n39 x(n35 x(n36 x(n44 n38))))))) dup(n38 n43))))
-  x(n39 x(n26 x(n41 x(n42 x(n43 x(n44 x(n31 n46))))))) = ::mandelbrot_sixel::main::6
+  l2(n0 l2(n1 l2(l4(@add(+0.5 @sub(n2 n3)) n4) l2(l4(n5 n6) l2(n7 l2(n8 l2(n9 l4(@add(+0.5 @sub(n10 n11)) @add(1 l4(@lt(::mandelbrot_sixel::width ?(::mandelbrot_sixel::main::10 ::mandelbrot_sixel::main::7 l2(n12 l2(n1 l2(n4 l2(n6 l2(n13 l2(n14 l2(n9 n15))))))))) n15))))))))))
+  @lt$(0 @u32_and(1 ?(::mandelbrot_sixel::mandelbrot::3 ::mandelbrot_sixel::mandelbrot::2 l2(n16 l2(n17 l2(+0.0 l2(+0.0 l2(+0.0 l2(+0.0 l2(0 @mul(101 @div(::mandelbrot_sixel::max_iter @rem(101 l4(@ne(n7 ?(::mandelbrot_sixel::main::9 ::mandelbrot_sixel::main::8 l2(n0 l2(n12 l2(n5 l2(n8 l2(n14 n18))))))) l4(n18 n13))))))))))))))) = #black_box(50)
+  @div(+2.0 n10) = #black_box(512)
+  @div(+2.0 n2) = #black_box(512)
+  @div$(+2.6 @mul(l1(n11 n3) l1(@add$(-0.8 n16) @add$(+0.0 n17)))) = #black_box(512)
 }
 
-::mandelbrot_sixel::main::8 {
-  x(n0 x(n28 x(n13 x(n7 x(1 n23)))))
-  ::std::io::print_byte = fn(ref(n0 n4) fn(33 _))
-  ::std::io::print_bytes = fn(ref(n4 n10) fn(n8 _))
-  ::std::u32::to_string = fn(n7 n8)
-  ::std::io::print_byte = fn(ref(n10 n16) fn(n14 _))
-  63 = @add(n13 n14)
-  ::std::io::print_byte = fn(ref(n16 n20) fn(35 _))
-  ::std::io::print_bytes = fn(ref(n20 n28) fn(n24 _))
-  ::std::u32::to_string = fn(n23 n24)
-}
+::mandelbrot_sixel::main::8 { l2(@io_print_byte(33 n0) l2(n1 l2(@add$(63 n2) l2(l4(?(::std::u32::to_string::5 ::std::u32::to_string::1 l2(n3 l1(l4(?(::std::io::print_bytes::3 ::std::io::print_bytes::2 l2(n0 l2(@io_print_byte(n2 @io_print_byte(35 n4)) l2(n5 n6)))) n5) l0(_ n6)))) n3) l2(1 l4(?(::std::u32::to_string::5 ::std::u32::to_string::1 l2(n7 l1(l4(?(::std::io::print_bytes::3 ::std::io::print_bytes::2 l2(n4 l2(n1 l2(n8 n9)))) n8) l0(_ n9)))) n7)))))) }
 
-::mandelbrot_sixel::main::9 { x(n4 x(n4 x(_ x(@add(1 n7) x(n7 _))))) }
+::mandelbrot_sixel::main::9 { l2(n0 l2(n0 l2(_ l2(@add(1 n1) l2(n1 _))))) }
 
-::mandelbrot_sixel::main::10 { x(n1 x(n1 x(_ x(_ x(_ x(n6 x(n6 _))))))) }
+::mandelbrot_sixel::main::10 { l2(n0 l2(n0 l2(_ l2(_ l2(_ l2(n1 l2(n1 _))))))) }
 
-::mandelbrot_sixel::main::11 { x(_ x(1 45)) }
+::mandelbrot_sixel::main::11 { l2(_ l2(1 45)) }
 
-::mandelbrot_sixel::main::12 { x(n3 x(n3 36)) }
+::mandelbrot_sixel::main::12 { l2(n0 l2(n0 36)) }
 
-::mandelbrot_sixel::main::13 { x(n1 x(n1 _)) }
+::mandelbrot_sixel::main::13 { l2(n0 l2(n0 _)) }
 
-::mandelbrot_sixel::mandelbrot {
-  fn(n12 fn(n13 n10))
-  tup(n14 tup(n15 tup(n16 n17))) = +0.0
-  x(n12 x(n13 x(n14 x(n15 x(n16 x(n17 x(0 @mul(101 @div(::mandelbrot_sixel::max_iter @rem(101 n10)))))))))) = ::mandelbrot_sixel::mandelbrot::1
-}
+::mandelbrot_sixel::mandelbrot::2 { l2(l4(n0 n1) l2(l4(n2 n3) l2(@mul$(+2.0 @mul(n4 @add(n2 l4(@mul(n5 l4(n6 n7)) l4(n5 n8))))) l2(n4 l2(@sub(n9 @add(n0 l4(@mul(n10 l4(@add(n6 @lt(+4.0 n11)) n12)) l4(n10 n13)))) l2(n9 l2(@add(1 l4(@lt(::mandelbrot_sixel::max_iter @u32_and(n11 ?(::mandelbrot_sixel::mandelbrot::3 ::mandelbrot_sixel::mandelbrot::2 l2(n1 l2(n3 l2(n13 l2(n8 l2(n12 l2(n7 l2(n14 n15)))))))))) n14)) n15))))))) }
 
-::mandelbrot_sixel::mandelbrot::1 { x(n16 x(n17 x(n18 x(n19 x(dup(@add(n3 @lt(+4.0 n5)) n20) x(dup(n3 n21) x(dup(@lt(::mandelbrot_sixel::max_iter @u32_and(n5 ?(::mandelbrot_sixel::mandelbrot::3 ::mandelbrot_sixel::mandelbrot::2 x(n16 x(n17 x(n18 x(n19 x(n20 x(n21 x(n22 n15)))))))))) n22) n15))))))) }
+::mandelbrot_sixel::mandelbrot::3 { l2(_ l2(_ l2(_ l2(_ l2(_ l2(_ l2(n0 n0))))))) }
 
-::mandelbrot_sixel::mandelbrot::2 {
-  x(dup(n6 n32) x(dup(n12 n33) x(n8 x(n10 x(@sub(n4 @add(n6 n7)) x(n4 x(@add(1 n38) n31)))))))
-  +2.0 = @mul(n8 @mul(n10 @add(n12 n13)))
-  tup(dup(@mul(n17 n36) dup(n17 n34)) dup(@mul(n21 n37) dup(n21 n35))) = tup(n7 n13)
-  x(n32 x(n33 x(n34 x(n35 x(n36 x(n37 x(n38 n31))))))) = ::mandelbrot_sixel::mandelbrot::1
-}
+::std::io::print_bytes::2 { l2(@io_print_byte(n0 n1) l2(n2 l2(@sub(1 l4(?(::std::io::print_bytes::3 ::std::io::print_bytes::2 l2(n1 l2(n2 l2(n3 n4)))) n3)) l1(n0 n4)))) }
 
-::mandelbrot_sixel::mandelbrot::3 { x(_ x(_ x(_ x(_ x(_ x(_ x(n7 n7))))))) }
+::std::io::print_bytes::3 { l2(n0 l2(n0 _)) }
 
-::std::hint::black_box { fn(x #black_box(x)) }
+::std::u32::to_string::1 { l2(l4(?(::std::u32::to_string::4 ::std::u32::to_string::3 l2(n0 l2(l1(0 l0(n1 n1)) n2))) n0) n2) }
 
-::std::io::print_bytes {
-  fn(ref(n11 n1) fn(tup(n13 fn(_ n14)) _))
-  x(n11 x(n1 x(n13 n14))) = ::std::io::print_bytes::1
-}
+::std::u32::to_string::3 { l2(l4(@rem(10 @add$(48 n0)) @div(10 l4(?(::std::u32::to_string::4 ::std::u32::to_string::3 l2(n1 l2(l1(n2 l0(n3 l1(n0 n4))) n5))) n1))) l2(l1(@add(1 n2) l0(n3 n4)) n5)) }
 
-::std::io::print_bytes::1 { x(n6 x(n3 x(dup(?(::std::io::print_bytes::3 ::std::io::print_bytes::2 x(n6 x(n3 x(n8 n9)))) n8) n9))) }
+::std::u32::to_string::4 { l2(_ l2(n0 n0)) }
 
-::std::io::print_bytes::2 {
-  x(n6 x(n12 x(@sub(1 n17) tup(n9 n18))))
-  ::std::io::print_byte = fn(ref(n6 n15) fn(n9 _))
-  x(n15 x(n12 x(n17 n18))) = ::std::io::print_bytes::1
-}
-
-::std::io::print_bytes::3 { x(n1 x(n1 _)) }
-
-::std::io::print_byte { fn(ref(@io_print_byte(char io) io) fn(char _)) }
-
-::std::io::flush { fn(ref(@io_flush(0 io) io) _) }
-
-::std::u32::to_string { fn(dup(?(::std::u32::to_string::5 ::std::u32::to_string::1 x(n5 n3)) n5) n3) }
-
-::std::u32::to_string::1 {
-  x(n5 n4)
-  x(n5 x(tup(0 fn(n0 n0)) n4)) = ::std::u32::to_string::2
-}
-
-::std::u32::to_string::2 { x(dup(?(::std::u32::to_string::4 ::std::u32::to_string::3 x(n5 n6)) n5) n6) }
-
-::std::u32::to_string::3 {
-  x(dup(@rem(10 n7) @div(10 n19)) x(tup(@add(1 n4) fn(n10 n11)) n18))
-  48 = @add(n7 n8)
-  x(n19 x(tup(n4 fn(n10 tup(n8 n11))) n18)) = ::std::u32::to_string::2
-}
-
-::std::u32::to_string::4 { x(_ x(n2 n2)) }
-
-::std::u32::to_string::5 { x(_ tup(1 fn(n0 tup(48 n0)))) }
+::std::u32::to_string::5 { l2(_ l1(1 l0(n0 l1(48 n0)))) }
 
