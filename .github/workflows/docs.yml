@@ -1,9 +1,7 @@
-name: Publish GitHub Pages
+name: Docs
 
 on:
   push:
-    branches:
-      - main
 
 permissions:
   contents: read
@@ -24,10 +22,21 @@ jobs:
         working-directory: docs
       - run: find docs/book -iname '*.html' -exec sed -e 's#\.html##g' -e 's#/index#/#g' -i -- {} ';'
 
-      - uses: actions/configure-pages@v3
-      - uses: actions/upload-pages-artifact@v2
+      - if: github.ref_name == 'main'
+        uses: actions/configure-pages@v3
+      - if: github.ref_name == 'main'
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: "docs/static"
+          path: docs/static
 
-      - id: deployment
+      - if: github.ref_name == 'main'
         uses: actions/deploy-pages@v1
+
+      - run: rm docs/static/docs; mv docs/book docs/static/docs
+
+      - if: github.ref_name != 'main'
+        uses: denoland/deployctl@v1
+        with:
+          project: vine-dev
+          root: docs/static
+          entrypoint: https://deno.land/std/http/file_server.ts
