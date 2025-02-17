@@ -7,12 +7,6 @@
 
 ::std::ops::Ord::Gt { enum(_ enum(_ enum(r r))) }
 
-::std::IO::print_char { fn(ref(@io_print_char(char io) io) fn(char _)) }
-
-::std::IO::flush { fn(ref(@io_flush(0 io) io) _) }
-
-::std::IO::read_byte { fn(ref(dup(io0 @io_read_byte(default dup(byte @seq$(io0 io1)))) io1) fn(default byte)) }
-
 ::main { ::lambda::main }
 
 ::lambda::main {
@@ -498,7 +492,7 @@
   ::std::data::Map::len = fn(ref(w2 w10) w12)
 }
 
-::std::data::Map::len { fn(ref(tup(dup1283(w0 w8) w2) tup(w0 w2)) w8) }
+::std::data::Map::len { fn(ref(tup(dup1292(w0 w8) w2) tup(w0 w2)) w8) }
 
 ::std::data::Map::balance_left {
   fn(ref(tup(w6 tup(w7 w8)) w20) _)
@@ -547,16 +541,16 @@
 }
 
 ::std::data::Map::is_balanced {
-  fn(ref(tup(dup1555(w0 w14) w2) tup(w0 w2)) fn(ref(tup(dup1556(w6 w17) w8) tup(w6 w8)) w18))
+  fn(ref(tup(dup1564(w0 w14) w2) tup(w0 w2)) fn(ref(tup(dup1565(w6 w17) w8) tup(w6 w8)) w18))
   3 = @mul(w14 @add(2 @le$(w17 w18)))
 }
 
 ::std::data::Map::is_single {
-  fn(ref(tup(dup1559(w0 @le(w16 w17)) w2) tup(w0 w2)) fn(ref(tup(dup1560(w6 w15) w8) tup(w6 w8)) w17))
+  fn(ref(tup(dup1568(w0 @le(w16 w17)) w2) tup(w0 w2)) fn(ref(tup(dup1569(w6 w15) w8) tup(w6 w8)) w17))
   2 = @mul(w15 w16)
 }
 
-::std::data::Map::size { fn(ref(tup(tup(dup1563(w0 @add(w17 @add(1 w19))) w2) tup(w5 tup(dup1564(w6 w17) w8))) tup(tup(w0 w2) tup(w5 tup(w6 w8)))) w19) }
+::std::data::Map::size { fn(ref(tup(tup(dup1572(w0 @add(w17 @add(1 w19))) w2) tup(w5 tup(dup1573(w6 w17) w8))) tup(tup(w0 w2) tup(w5 tup(w6 w8)))) w19) }
 
 ::std::logical::Option::unwrap_or { fn(enum(::std::logical::Option::unwrap_or::4 enum(::std::logical::Option::unwrap_or::5 x(w1 w8))) fn(w1 w8)) }
 
@@ -568,10 +562,10 @@
 
 ::std::logical::Option::unwrap::3 { enum(w0 w0) }
 
-::std::unicode::Char::is_whitespace { fn(dup2339(@eq(32 @n32_or(w6 @n32_or(w9 w10))) dup2339(@eq(9 w6) @eq(10 w9))) w10) }
+::std::unicode::Char::is_whitespace { fn(dup2378(@eq(32 @n32_or(w6 @n32_or(w9 w10))) dup2378(@eq(9 w6) @eq(10 w9))) w10) }
 
 ::std::unicode::Char::is_alphanumeric {
-  fn(dup2345(dup2342(w4 @le(122 w7)) dup2345(dup2343(w10 @le(90 w13)) dup2344(w17 @le(57 w20)))) w22)
+  fn(dup2384(dup2381(w4 @le(122 w7)) dup2384(dup2382(w10 @le(90 w13)) dup2383(w17 @le(57 w20)))) w22)
   97 = @le(w4 @n32_and(w7 @n32_or(w14 @n32_or(w21 w22))))
   65 = @le(w10 @n32_and(w13 w14))
   48 = @le(w17 @n32_and(w20 w21))
@@ -588,7 +582,7 @@
   ::std::IO::print::1 = x(x(w1 w16) x(w7 w8))
 }
 
-::std::IO::print::1 { x(w4 x(dup2652(?(::std::IO::print::3 ::std::IO::print::2 x(w4 x(w6 w1))) w6) w1)) }
+::std::IO::print::1 { x(w4 x(dup2691(?(::std::IO::print::3 ::std::IO::print::2 x(w4 x(w6 w1))) w6) w1)) }
 
 ::std::IO::print::2 {
   x(x(w17 w21) x(@sub(1 w1) tup(w4 w5)))
@@ -597,6 +591,10 @@
 }
 
 ::std::IO::print::3 { x(x(w3 w3) _) }
+
+::std::IO::print_char { fn(ref(@io_print_char(w3 w8) w8) fn(w3 _)) }
+
+::std::IO::flush { fn(ref(@io_flush(0 w7) w7) _) }
 
 ::std::IO::prompt {
   fn(ref(w1 w16) fn(w3 w18))
@@ -607,10 +605,10 @@
 
 ::std::IO::read_line {
   fn(ref(w1 w17) w14)
-  ::std::IO::read_byte = fn(ref(w1 w6) fn(0 dup2695(@ne(0 ?(::std::IO::read_line::3 ::std::IO::read_line::2 x(x(w6 w17) x(w15 w14)))) w15)))
+  ::std::IO::read_byte = fn(ref(w1 w6) fn(0 dup2748(@ne(0 ?(::std::IO::read_line::3 ::std::IO::read_line::2 x(x(w6 w17) x(w15 w14)))) w15)))
 }
 
-::std::IO::read_line::2 { x(w5 x(dup2701(@eq(10 ?(::std::IO::read_line::6 ::std::IO::read_line::5 x(w5 x(w9 w8)))) w9) enum(enum(w8 w12) enum(_ w12)))) }
+::std::IO::read_line::2 { x(w5 x(dup2754(@eq(10 ?(::std::IO::read_line::6 ::std::IO::read_line::5 x(w5 x(w9 w8)))) w9) enum(enum(w8 w12) enum(_ w12)))) }
 
 ::std::IO::read_line::3 { x(x(w3 w3) x(_ ::std::logical::Option::None)) }
 
@@ -623,7 +621,7 @@
 
 ::std::IO::read_line::7 {
   x(x(w10 w18) w8)
-  ::std::IO::read_byte = fn(ref(w10 w1) fn(10 dup2718(@ne(10 ?(::std::IO::read_line::10 ::std::IO::read_line::9 x(x(w1 w18) x(w16 w8)))) w16)))
+  ::std::IO::read_byte = fn(ref(w10 w1) fn(10 dup2771(@ne(10 ?(::std::IO::read_line::10 ::std::IO::read_line::9 x(x(w1 w18) x(w16 w8)))) w16)))
 }
 
 ::std::IO::read_line::9 {
@@ -633,4 +631,6 @@
 }
 
 ::std::IO::read_line::10 { x(x(w5 w5) x(_ x(x(w2 w2) _))) }
+
+::std::IO::read_byte { fn(ref(dup(@io_read_byte(w3 dup(byte @seq$(io2 w8))) io2) w8) fn(w3 byte)) }
 
