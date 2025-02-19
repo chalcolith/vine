@@ -33,11 +33,11 @@
 
 ::cond_diverge::main::10 { x(x(w2 w2) _) }
 
-::std::unicode::Char::eq::eq { fn(ref(dup38(w0 @eq(w10 out)) w0) fn(ref(dup39(w3 w10) w3) out)) }
+::std::unicode::Char::eq::eq { fn(ref(dup38(w0 @n32_eq(w10 out)) w0) fn(ref(dup39(w3 w10) w3) out)) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup97(w0 @ne(w10 out)) w0) fn(ref(dup98(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup97(w0 @n32_ne(w10 out)) w0) fn(ref(dup98(w3 w10) w3) out)) }
 
 ::std::data::List::pop_front {
   fn(ref(tup(w1 tup(w3 w4)) tup(w21 tup(w19 w4))) w17)

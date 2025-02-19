@@ -16,9 +16,9 @@
   ::sum_divisors = fn(w0 w1)
   ::std::numeric::N32::add::add = fn(w24 fn(1 w25))
   ::std::numeric::N32::eq::eq = fn(ref(w1 w22) fn(ref(w25 _) ?(::sum_divisors::main::6 ::sum_divisors::main::5 x(w31 x(x(w22 w30) w28)))))
-  ::std::numeric::N32::to_string::to_string = fn(w9 tup(@add(2 w35) tup(w33 tup(58 tup(32 w36)))))
-  ::std::numeric::N32::to_string::to_string = fn(w30 tup(@add(w35 w37) tup(w36 w38)))
-  ::std::unicode::String::to_string::to_string = fn(w28 tup(@add(w37 w32) tup(w38 w34)))
+  ::std::numeric::N32::to_string::to_string = fn(w9 tup(@n32_add(2 w35) tup(w33 tup(58 tup(32 w36)))))
+  ::std::numeric::N32::to_string::to_string = fn(w30 tup(@n32_add(w35 w37) tup(w36 w38)))
+  ::std::unicode::String::to_string::to_string = fn(w28 tup(@n32_add(w37 w32) tup(w38 w34)))
   ::std::IO::println = fn(ref(w20 w6) fn(tup(w32 tup(w33 w34)) _))
   ::std::numeric::N32::add::add = fn(w16 fn(1 w17))
   ::sum_divisors::main::1 = x(x(w6 w43) w17)
@@ -38,13 +38,13 @@
 
 ::sum_divisors::main::8 { tup(0 tup(w4 w4)) }
 
-::std::numeric::N32::ord::le { fn(ref(dup30(w0 @le(w10 out)) w0) fn(ref(dup31(w3 w10) w3) out)) }
+::std::numeric::N32::ord::le { fn(ref(dup30(w0 @n32_le(w10 out)) w0) fn(ref(dup31(w3 w10) w3) out)) }
 
-::std::numeric::N32::eq::eq { fn(ref(dup34(w0 @eq(w10 out)) w0) fn(ref(dup35(w3 w10) w3) out)) }
+::std::numeric::N32::eq::eq { fn(ref(dup34(w0 @n32_eq(w10 out)) w0) fn(ref(dup35(w3 w10) w3) out)) }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::mul::mul { fn(@mul(w1 out) fn(w1 out)) }
+::std::numeric::N32::mul::mul { fn(@n32_mul(w1 out) fn(w1 out)) }
 
 ::std::numeric::N32::to_string::to_string {
   fn(w0 w10)
@@ -74,18 +74,18 @@
 
 ::std::numeric::N32::to_string::to_string::6 { x(_ x(w1 w1)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup66(w0 @ne(w10 out)) w0) fn(ref(dup67(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup66(w0 @n32_ne(w10 out)) w0) fn(ref(dup67(w3 w10) w3) out)) }
 
 ::std::data::List::concat::concat {
   fn(tup(w5 tup(w6 w11)) fn(tup(w10 tup(w11 w21)) tup(w18 tup(w6 w21))))
   ::std::numeric::N32::add::add = fn(w5 fn(w10 w18))
 }
 
-::std::unicode::Char::add_n32::add { fn(@add(w1 out) fn(w1 out)) }
+::std::unicode::Char::add_n32::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::rem::rem { fn(@rem(w1 out) fn(w1 out)) }
+::std::numeric::N32::rem::rem { fn(@n32_rem(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::N32::div::div { fn(@n32_div(w1 out) fn(w1 out)) }
 
 ::std::unicode::String::to_string::to_string { fn(w0 w0) }
 
@@ -149,7 +149,7 @@
 
 ::sum_divisors::12 { x(_ x(x(w2 w2) _)) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
 ::std::unicode::String::to_chars::cast { fn(w0 w0) }
 

@@ -21,7 +21,7 @@
   fn(w0 tup(w13 tup(tup(91 w14) w15)))
   ::std::data::List::map = fn(w0 fn(::std::numeric::N32::to_string::to_string w5))
   ::std::data::List::join = fn(w5 fn(tup(2 tup(tup(44 tup(32 w12)) w12)) w7))
-  ::std::unicode::String::to_string::to_string = fn(w7 tup(@add(2 w13) tup(w14 tup(93 w15))))
+  ::std::unicode::String::to_string::to_string = fn(w7 tup(@n32_add(2 w13) tup(w14 tup(93 w15))))
 }
 
 ::std::unicode::String::to_string::to_string { fn(w0 w0) }
@@ -54,33 +54,33 @@
 
 ::std::numeric::N32::to_string::to_string::6 { x(_ x(w1 w1)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup35(w0 @ne(w10 out)) w0) fn(ref(dup36(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup35(w0 @n32_ne(w10 out)) w0) fn(ref(dup36(w3 w10) w3) out)) }
 
 ::std::data::List::concat::concat {
   fn(tup(w5 tup(w6 w11)) fn(tup(w10 tup(w11 w21)) tup(w18 tup(w6 w21))))
   ::std::numeric::N32::add::add = fn(w5 fn(w10 w18))
 }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::unicode::Char::add_n32::add { fn(@add(w1 out) fn(w1 out)) }
+::std::unicode::Char::add_n32::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::rem::rem { fn(@rem(w1 out) fn(w1 out)) }
+::std::numeric::N32::rem::rem { fn(@n32_rem(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::N32::div::div { fn(@n32_div(w1 out) fn(w1 out)) }
 
 ::std::data::List::to_string::to_string::2 {
   fn(w0 tup(w13 tup(tup(91 w14) w15)))
   ::std::data::List::map = fn(w0 fn(::std::unicode::String::to_string::to_string w5))
   ::std::data::List::join = fn(w5 fn(tup(2 tup(tup(44 tup(32 w12)) w12)) w7))
-  ::std::unicode::String::to_string::to_string = fn(w7 tup(@add(2 w13) tup(w14 tup(93 w15))))
+  ::std::unicode::String::to_string::to_string = fn(w7 tup(@n32_add(2 w13) tup(w14 tup(93 w15))))
 }
 
 ::std::data::List::to_string::to_string::3 {
   fn(w0 tup(w13 tup(tup(91 w14) w15)))
   ::std::data::List::map = fn(w0 fn(::std::unicode::Char::to_string::to_string w5))
   ::std::data::List::join = fn(w5 fn(tup(2 tup(tup(44 tup(32 w12)) w12)) w7))
-  ::std::unicode::String::to_string::to_string = fn(w7 tup(@add(2 w13) tup(w14 tup(93 w15))))
+  ::std::unicode::String::to_string::to_string = fn(w7 tup(@n32_add(2 w13) tup(w14 tup(93 w15))))
 }
 
 ::std::unicode::Char::to_string::to_string {
@@ -94,7 +94,7 @@
   fn(w0 tup(w13 tup(tup(91 w14) w15)))
   ::std::data::List::map = fn(w0 fn(::std::logical::Bool::to_string::to_string w5))
   ::std::data::List::join = fn(w5 fn(tup(2 tup(tup(44 tup(32 w12)) w12)) w7))
-  ::std::unicode::String::to_string::to_string = fn(w7 tup(@add(2 w13) tup(w14 tup(93 w15))))
+  ::std::unicode::String::to_string::to_string = fn(w7 tup(@n32_add(2 w13) tup(w14 tup(93 w15))))
 }
 
 ::std::logical::Bool::to_string::to_string { fn(?(::std::logical::Bool::to_string::to_string::3 ::std::logical::Bool::to_string::to_string::2 w6) w6) }
@@ -107,16 +107,16 @@
   fn(w0 tup(w13 tup(tup(91 w14) w15)))
   ::std::data::List::map = fn(w0 fn(::std::unicode::ToString::pair::to_string::1 w5))
   ::std::data::List::join = fn(w5 fn(tup(2 tup(tup(44 tup(32 w12)) w12)) w7))
-  ::std::unicode::String::to_string::to_string = fn(w7 tup(@add(2 w13) tup(w14 tup(93 w15))))
+  ::std::unicode::String::to_string::to_string = fn(w7 tup(@n32_add(2 w13) tup(w14 tup(93 w15))))
 }
 
 ::std::unicode::ToString::pair::to_string::1 {
   fn(tup(w0 w1) tup(w11 tup(tup(40 w12) w13)))
-  ::std::numeric::N32::to_string::to_string = fn(w0 tup(@add(4 w14) tup(w12 tup(44 tup(32 w15)))))
-  ::std::unicode::Char::to_string::to_string = fn(w1 tup(@add(w14 w11) tup(w15 tup(41 w13))))
+  ::std::numeric::N32::to_string::to_string = fn(w0 tup(@n32_add(4 w14) tup(w12 tup(44 tup(32 w15)))))
+  ::std::unicode::Char::to_string::to_string = fn(w1 tup(@n32_add(w14 w11) tup(w15 tup(41 w13))))
 }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
 ::std::data::List::map {
   fn(tup(dup185(w6 w22) tup(w1 _)) fn(w3 tup(w6 tup(w10 w19))))

@@ -49,20 +49,20 @@
   ::find_primes::main::2 = x(w4 x(w2 x(w8 w9)))
 }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::mul::mul { fn(@mul(w1 out) fn(w1 out)) }
+::std::numeric::N32::mul::mul { fn(@n32_mul(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::ord::le { fn(ref(dup56(w0 @le(w10 out)) w0) fn(ref(dup57(w3 w10) w3) out)) }
+::std::numeric::N32::ord::le { fn(ref(dup56(w0 @n32_le(w10 out)) w0) fn(ref(dup57(w3 w10) w3) out)) }
 
 ::std::ops::comparison::Ord::ge::1 {
   fn(w1 fn(w4 w14))
   ::std::numeric::N32::ord::le = fn(w4 fn(w1 w14))
 }
 
-::std::numeric::N32::rem::rem { fn(@rem(w1 out) fn(w1 out)) }
+::std::numeric::N32::rem::rem { fn(@n32_rem(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::eq::eq { fn(ref(dup70(w0 @eq(w10 out)) w0) fn(ref(dup71(w3 w10) w3) out)) }
+::std::numeric::N32::eq::eq { fn(ref(dup70(w0 @n32_eq(w10 out)) w0) fn(ref(dup71(w3 w10) w3) out)) }
 
 ::std::numeric::N32::to_string::to_string {
   fn(w0 w10)
@@ -92,18 +92,18 @@
 
 ::std::numeric::N32::to_string::to_string::6 { x(_ x(w1 w1)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup94(w0 @ne(w10 out)) w0) fn(ref(dup95(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup94(w0 @n32_ne(w10 out)) w0) fn(ref(dup95(w3 w10) w3) out)) }
 
 ::std::data::List::concat::concat {
   fn(tup(w5 tup(w6 w11)) fn(tup(w10 tup(w11 w21)) tup(w18 tup(w6 w21))))
   ::std::numeric::N32::add::add = fn(w5 fn(w10 w18))
 }
 
-::std::unicode::Char::add_n32::add { fn(@add(w1 out) fn(w1 out)) }
+::std::unicode::Char::add_n32::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::N32::div::div { fn(@n32_div(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
 ::std::unicode::String::to_chars::cast { fn(w0 w0) }
 

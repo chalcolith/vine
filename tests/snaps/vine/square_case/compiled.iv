@@ -20,9 +20,9 @@
 
 ::square_case::main::3 { x(x(w2 w2) _) }
 
-::std::numeric::N32::ord::lt { fn(ref(dup16(w0 @lt(w10 out)) w0) fn(ref(dup17(w3 w10) w3) out)) }
+::std::numeric::N32::ord::lt { fn(ref(dup16(w0 @n32_lt(w10 out)) w0) fn(ref(dup17(w3 w10) w3) out)) }
 
-::std::numeric::N32::mul::mul { fn(@mul(w1 out) fn(w1 out)) }
+::std::numeric::N32::mul::mul { fn(@n32_mul(w1 out) fn(w1 out)) }
 
 ::square_case::squares {
   fn(ref(w1 w8) fn(w3 _))
@@ -44,7 +44,7 @@
 
 ::square_case::squares::3 { x(x(w3 w3) _) }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
 ::std::IO::print_char { fn(ref(@io_print_char(w3 w8) w8) fn(w3 _)) }
 

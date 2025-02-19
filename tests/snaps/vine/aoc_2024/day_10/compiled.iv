@@ -10,9 +10,9 @@
   ::std::data::List::map = fn(w15 fn(fn(w51 w51) w17))
   ::std::unicode::Char::eq::eq = fn(ref(w126 w127) fn(ref(48 _) ?(::day_10::main::5 ::day_10::main::4 x(w127 x(x(w66 w145) x(x(w68 w143) x(x(w70 w141) x(w77 x(w78 x(w85 x(w86 x(w93 x(w94 x(w101 x(w102 dup42(w118 dup42(w120 dup42(w122 w124))))))))))))))))))
   ::day_10::cross = fn(w17 fn(fn(dup13(w108 dup13(w110 dup13(w112 dup13(w114 w126)))) fn(tup(tup(tup(w77 w78) tup(w108 w118)) tup(tup(tup(w85 w86) tup(w110 w120)) tup(tup(tup(w93 w94) tup(w112 w122)) tup(tup(w101 w102) tup(w114 w124))))) fn(ref(tup(w64 tup(w66 tup(w68 w70))) tup(w64 tup(w145 tup(w143 w141)))) _))) fn(tup(46 0) fn(ref(tup(w6 0) tup(w22 tup(_ tup(w26 w28)))) _))))
-  ::std::numeric::N32::to_string::to_string = fn(w26 tup(@add(8 w147) tup(w148 w149)))
+  ::std::numeric::N32::to_string::to_string = fn(w26 tup(@n32_add(8 w147) tup(w148 w149)))
   ::std::IO::println = fn(ref(w22 w34) fn(tup(w147 tup(tup(83 tup(99 tup(111 tup(114 tup(101 tup(115 tup(58 tup(32 w148)))))))) w149)) _))
-  ::std::numeric::N32::to_string::to_string = fn(w28 tup(@add(9 w152) tup(w153 w154)))
+  ::std::numeric::N32::to_string::to_string = fn(w28 tup(@n32_add(9 w152) tup(w153 w154)))
   ::std::IO::println = fn(ref(w34 w41) fn(tup(w152 tup(tup(82 tup(97 tup(116 tup(105 tup(110 tup(103 tup(115 tup(58 tup(32 w153))))))))) w154)) _))
 }
 
@@ -54,11 +54,11 @@
 
 ::day_10::main::12 { x(x(w9 w9) x(x(w7 w7) x(w5 x(w4 tup(w5 w4))))) }
 
-::std::unicode::Char::eq::eq { fn(ref(dup123(w0 @eq(w10 out)) w0) fn(ref(dup124(w3 w10) w3) out)) }
+::std::unicode::Char::eq::eq { fn(ref(dup123(w0 @n32_eq(w10 out)) w0) fn(ref(dup124(w3 w10) w3) out)) }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::unicode::Char::sub_n32::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::unicode::Char::sub_n32::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
 ::std::ops::vectorized::or::or::1 {
   fn(tup(w0 w1) fn(tup(w3 w4) tup(w10 w13)))
@@ -108,18 +108,18 @@
 
 ::std::numeric::N32::to_string::to_string::6 { x(_ x(w1 w1)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup177(w0 @ne(w10 out)) w0) fn(ref(dup178(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup177(w0 @n32_ne(w10 out)) w0) fn(ref(dup178(w3 w10) w3) out)) }
 
 ::std::data::List::concat::concat {
   fn(tup(w5 tup(w6 w11)) fn(tup(w10 tup(w11 w21)) tup(w18 tup(w6 w21))))
   ::std::numeric::N32::add::add = fn(w5 fn(w10 w18))
 }
 
-::std::unicode::Char::add_n32::add { fn(@add(w1 out) fn(w1 out)) }
+::std::unicode::Char::add_n32::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::rem::rem { fn(@rem(w1 out) fn(w1 out)) }
+::std::numeric::N32::rem::rem { fn(@n32_rem(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::N32::div::div { fn(@n32_div(w1 out) fn(w1 out)) }
 
 ::day_10::set {
   fn(dup204(w3 dup204(w6 dup204(w11 w17))) w23)
@@ -145,7 +145,7 @@
 
 ::day_10::set::f::3 { x(w5 x(w4 tup(w4 w5))) }
 
-::std::numeric::N32::eq::eq { fn(ref(dup231(w0 @eq(w10 out)) w0) fn(ref(dup232(w3 w10) w3) out)) }
+::std::numeric::N32::eq::eq { fn(ref(dup231(w0 @n32_eq(w10 out)) w0) fn(ref(dup232(w3 w10) w3) out)) }
 
 ::day_10::count {
   fn(tup(w4 w5) w13)
@@ -286,9 +286,9 @@
   ::std::numeric::N32::ord::lt = fn(w4 fn(w1 w14))
 }
 
-::std::numeric::N32::ord::lt { fn(ref(dup431(w0 @lt(w10 out)) w0) fn(ref(dup432(w3 w10) w3) out)) }
+::std::numeric::N32::ord::lt { fn(ref(dup431(w0 @n32_lt(w10 out)) w0) fn(ref(dup432(w3 w10) w3) out)) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
 ::std::data::List::get {
   fn(ref(tup(w1 tup(w3 w5)) tup(w1 tup(w4 w5))) fn(w9 ref(w14 w15)))
@@ -313,7 +313,7 @@
   ::std::numeric::N32::ord::le = fn(w4 fn(w1 w14))
 }
 
-::std::numeric::N32::ord::le { fn(ref(dup490(w0 @le(w10 out)) w0) fn(ref(dup491(w3 w10) w3) out)) }
+::std::numeric::N32::ord::le { fn(ref(dup490(w0 @n32_le(w10 out)) w0) fn(ref(dup491(w3 w10) w3) out)) }
 
 ::std::data::List::map {
   fn(tup(dup494(w6 w22) tup(w1 _)) fn(w3 tup(w6 tup(w10 w19))))
@@ -374,7 +374,7 @@
 
 ::std::unicode::String::from_chars::cast { fn(w0 w0) }
 
-::std::unicode::Char::eq::ne { fn(ref(dup2482(w0 @ne(w10 out)) w0) fn(ref(dup2483(w3 w10) w3) out)) }
+::std::unicode::Char::eq::ne { fn(ref(dup2482(w0 @n32_ne(w10 out)) w0) fn(ref(dup2483(w3 w10) w3) out)) }
 
 ::std::unicode::String::len { fn(ref(tup(dup2529(w0 w13) w2) tup(w0 w2)) w13) }
 

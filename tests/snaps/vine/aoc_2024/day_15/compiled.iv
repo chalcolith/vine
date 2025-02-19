@@ -10,7 +10,7 @@
   ::std::data::Array::to_list::cast = fn(w15 w16)
   ::day_15::main::43 = x(x(0 w85) x(w16 0))
   ::day_15::main::18 = x(x(w81 w89) x(w87 _))
-  ::std::numeric::N32::to_string::to_string = fn(w85 tup(@add(8 w90) tup(w91 w92)))
+  ::std::numeric::N32::to_string::to_string = fn(w85 tup(@n32_add(8 w90) tup(w91 w92)))
   ::std::IO::println = fn(ref(w89 w22) fn(tup(w90 tup(tup(80 tup(97 tup(114 tup(116 tup(32 tup(49 tup(58 tup(32 w91)))))))) w92)) _))
   ::std::data::Array::to_list::cast = fn(w8 w29)
   ::std::data::Array::to_list::cast = fn(w95 w101)
@@ -26,7 +26,7 @@
   ::std::data::Array::to_list::cast = fn(w53 w54)
   ::day_15::main::132 = x(x(0 w116) x(w54 0))
   ::day_15::main::18 = x(x(w22 w120) x(w118 _))
-  ::std::numeric::N32::to_string::to_string = fn(w116 tup(@add(8 w121) tup(w122 w123)))
+  ::std::numeric::N32::to_string::to_string = fn(w116 tup(@n32_add(8 w121) tup(w122 w123)))
   ::std::IO::println = fn(ref(w120 w60) fn(tup(w121 tup(tup(80 tup(97 tup(114 tup(116 tup(32 tup(50 tup(58 tup(32 w122)))))))) w123)) _))
 }
 
@@ -442,11 +442,11 @@
 
 ::day_15::main::144 { x(x(w4 w4) _) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup612(w0 @ne(w10 out)) w0) fn(ref(dup613(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup612(w0 @n32_ne(w10 out)) w0) fn(ref(dup613(w3 w10) w3) out)) }
 
-::std::unicode::Char::eq::eq { fn(ref(dup616(w0 @eq(w10 out)) w0) fn(ref(dup617(w3 w10) w3) out)) }
+::std::unicode::Char::eq::eq { fn(ref(dup616(w0 @n32_eq(w10 out)) w0) fn(ref(dup617(w3 w10) w3) out)) }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
 ::std::data::Array::from_list::cast {
   fn(tup(w0 tup(w1 _)) w10)
@@ -468,7 +468,7 @@
   ::std::numeric::N32::add::add = fn(w5 fn(w10 w18))
 }
 
-::std::numeric::N32::neg::neg { fn(@sub$(0 out) out) }
+::std::numeric::N32::neg::neg { fn(@n32_sub$(0 out) out) }
 
 ::std::ops::vectorized::add::add::1 {
   fn(tup(w0 w1) fn(tup(w3 w4) tup(w10 w13)))
@@ -476,7 +476,7 @@
   ::std::numeric::N32::add::add = fn(w1 fn(w4 w13))
 }
 
-::std::numeric::N32::mul::mul { fn(@mul(w1 out) fn(w1 out)) }
+::std::numeric::N32::mul::mul { fn(@n32_mul(w1 out) fn(w1 out)) }
 
 ::std::numeric::N32::to_string::to_string {
   fn(w0 w10)
@@ -506,11 +506,11 @@
 
 ::std::numeric::N32::to_string::to_string::6 { x(_ x(w1 w1)) }
 
-::std::unicode::Char::add_n32::add { fn(@add(w1 out) fn(w1 out)) }
+::std::unicode::Char::add_n32::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::rem::rem { fn(@rem(w1 out) fn(w1 out)) }
+::std::numeric::N32::rem::rem { fn(@n32_rem(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::N32::div::div { fn(@n32_div(w1 out) fn(w1 out)) }
 
 ::std::ops::vectorized::mul::mul::1 {
   fn(tup(w0 w1) fn(tup(w3 w4) tup(w10 w13)))
@@ -518,9 +518,9 @@
   ::std::numeric::N32::mul::mul = fn(w1 fn(w4 w13))
 }
 
-::std::numeric::N32::eq::eq { fn(ref(dup711(w0 @eq(w10 out)) w0) fn(ref(dup712(w3 w10) w3) out)) }
+::std::numeric::N32::eq::eq { fn(ref(dup711(w0 @n32_eq(w10 out)) w0) fn(ref(dup712(w3 w10) w3) out)) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
 ::std::data::List::len { fn(ref(tup(dup719(w11 w7) w8) tup(w7 w8)) w11) }
 
@@ -529,7 +529,7 @@
   ::std::numeric::N32::ord::lt = fn(w4 fn(w1 w14))
 }
 
-::std::numeric::N32::ord::lt { fn(ref(dup748(w0 @lt(w10 out)) w0) fn(ref(dup749(w3 w10) w3) out)) }
+::std::numeric::N32::ord::lt { fn(ref(dup748(w0 @n32_lt(w10 out)) w0) fn(ref(dup749(w3 w10) w3) out)) }
 
 ::std::data::List::get {
   fn(ref(tup(w1 tup(w3 w5)) tup(w1 tup(w4 w5))) fn(w9 ref(w14 w15)))
@@ -930,7 +930,7 @@
 
 ::std::logical::Option::unwrap::3 { enum(w0 w0) }
 
-::std::unicode::Char::eq::ne { fn(ref(dup2778(w0 @ne(w10 out)) w0) fn(ref(dup2779(w3 w10) w3) out)) }
+::std::unicode::Char::eq::ne { fn(ref(dup2778(w0 @n32_ne(w10 out)) w0) fn(ref(dup2779(w3 w10) w3) out)) }
 
 ::std::unicode::String::len { fn(ref(tup(dup2829(w0 w13) w2) tup(w0 w2)) w13) }
 

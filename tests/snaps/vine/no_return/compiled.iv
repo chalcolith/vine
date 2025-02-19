@@ -6,9 +6,9 @@
   ::std::IO::println = fn(w1 fn(tup(18 tup(tup(87 tup(101 tup(32 tup(115 tup(104 tup(111 tup(117 tup(108 tup(100 tup(32 tup(115 tup(101 tup(101 tup(32 tup(116 tup(104 tup(105 tup(115 w18)))))))))))))))))) w18)) _))
 }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup60(w0 @ne(w10 out)) w0) fn(ref(dup61(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup60(w0 @n32_ne(w10 out)) w0) fn(ref(dup61(w3 w10) w3) out)) }
 
 ::std::unicode::String::to_chars::cast { fn(w0 w0) }
 

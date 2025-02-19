@@ -58,20 +58,20 @@
 
 ::std::numeric::N32::to_string::to_string::6 { x(_ x(w1 w1)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup42(w0 @ne(w10 out)) w0) fn(ref(dup43(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup42(w0 @n32_ne(w10 out)) w0) fn(ref(dup43(w3 w10) w3) out)) }
 
 ::std::data::List::concat::concat {
   fn(tup(w5 tup(w6 w11)) fn(tup(w10 tup(w11 w21)) tup(w18 tup(w6 w21))))
   ::std::numeric::N32::add::add = fn(w5 fn(w10 w18))
 }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::unicode::Char::add_n32::add { fn(@add(w1 out) fn(w1 out)) }
+::std::unicode::Char::add_n32::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::rem::rem { fn(@rem(w1 out) fn(w1 out)) }
+::std::numeric::N32::rem::rem { fn(@n32_rem(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::N32::div::div { fn(@n32_div(w1 out) fn(w1 out)) }
 
 ::fib_repl::fib {
   fn(w0 w9)
@@ -93,11 +93,11 @@
 
 ::fib_repl::fib::3 { x(_ x(x(w2 w2) _)) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::eq::eq { fn(ref(dup482(w0 @eq(w10 out)) w0) fn(ref(dup483(w3 w10) w3) out)) }
+::std::numeric::N32::eq::eq { fn(ref(dup482(w0 @n32_eq(w10 out)) w0) fn(ref(dup483(w3 w10) w3) out)) }
 
-::std::numeric::N32::mul::mul { fn(@mul(w1 out) fn(w1 out)) }
+::std::numeric::N32::mul::mul { fn(@n32_mul(w1 out) fn(w1 out)) }
 
 ::std::numeric::N32::parse {
   fn(w0 w15)
@@ -146,13 +146,13 @@
 
 ::std::unicode::String::to_chars::cast { fn(w0 w0) }
 
-::std::unicode::Char::ord::le { fn(ref(dup1521(w0 @le(w10 out)) w0) fn(ref(dup1522(w3 w10) w3) out)) }
+::std::unicode::Char::ord::le { fn(ref(dup1521(w0 @n32_le(w10 out)) w0) fn(ref(dup1522(w3 w10) w3) out)) }
 
-::std::unicode::Char::sub_char::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::unicode::Char::sub_char::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
-::std::unicode::Char::eq::eq { fn(ref(dup2191(w0 @eq(w10 out)) w0) fn(ref(dup2192(w3 w10) w3) out)) }
+::std::unicode::Char::eq::eq { fn(ref(dup2191(w0 @n32_eq(w10 out)) w0) fn(ref(dup2192(w3 w10) w3) out)) }
 
-::std::unicode::Char::eq::ne { fn(ref(dup2195(w0 @ne(w10 out)) w0) fn(ref(dup2196(w3 w10) w3) out)) }
+::std::unicode::Char::eq::ne { fn(ref(dup2195(w0 @n32_ne(w10 out)) w0) fn(ref(dup2196(w3 w10) w3) out)) }
 
 ::std::IO::println {
   fn(ref(w1 w12) fn(w3 _))

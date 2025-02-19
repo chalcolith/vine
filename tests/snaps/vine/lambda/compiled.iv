@@ -35,7 +35,7 @@
 
 ::lambda::main::10 {
   enum(w0 x(x(w4 w6) w11))
-  ::std::unicode::String::to_string::to_string = fn(w0 tup(@add(7 w12) tup(w13 w14)))
+  ::std::unicode::String::to_string::to_string = fn(w0 tup(@n32_add(7 w12) tup(w13 w14)))
   ::std::IO::println = fn(ref(w4 w6) fn(tup(w12 tup(tup(101 tup(114 tup(114 tup(111 tup(114 tup(58 tup(32 w13))))))) w14)) w11))
 }
 
@@ -77,7 +77,7 @@
   ::std::numeric::N32::add::add = fn(w5 fn(w10 w18))
 }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
 ::lambda::Term::print_normal {
   fn(w0 fn(w1 w9))
@@ -88,7 +88,7 @@
 
 ::lambda::Term::print_normal::6 {
   x(w13 x(w12 x(w11 w9)))
-  ::std::unicode::String::to_string::to_string = fn(w12 tup(@add(1 w14) tup(w15 w16)))
+  ::std::unicode::String::to_string::to_string = fn(w12 tup(@n32_add(1 w14) tup(w15 w16)))
   ::std::data::List::into_iter = fn(w11 w5)
   ::lambda::Term::print_normal::7 = x(w13 x(x(tup(w14 tup(tup(40 w15) w16)) w21) w5))
   ::std::data::List::concat::concat = fn(w21 fn(tup(1 tup(tup(41 w25) w25)) w9))
@@ -113,10 +113,10 @@
   enum(w0 enum(w1 x(dup110(w6 w18) tup(w24 tup(tup(92 w25) w26)))))
   ::lambda::new_var = fn(w6 dup113(w10 w15))
   ::lambda::Term::bind = fn(w0 fn(enum(_ enum(_ enum(enum(w10 enum(tup(0 tup(w22 w22)) w23)) w23))) _))
-  ::std::unicode::String::to_string::to_string = fn(w15 tup(@add(3 w27) tup(w25 tup(46 tup(32 w28)))))
+  ::std::unicode::String::to_string::to_string = fn(w15 tup(@n32_add(3 w27) tup(w25 tup(46 tup(32 w28)))))
   ::std::numeric::N32::add::add = fn(w18 fn(1 w19))
   ::lambda::Term::print_normal = fn(w1 fn(w19 w20))
-  ::std::unicode::String::to_string::to_string = fn(w20 tup(@add(w27 w24) tup(w28 w26)))
+  ::std::unicode::String::to_string::to_string = fn(w20 tup(@n32_add(w27 w24) tup(w28 w26)))
 }
 
 ::lambda::Term::print_normal::14 {
@@ -125,7 +125,7 @@
   ::std::numeric::N32::eq::eq = fn(ref(w10 _) fn(ref(0 _) ?(::lambda::Term::print_normal::6 ::lambda::Term::print_normal::5 x(w5 x(w0 x(w8 w14))))))
 }
 
-::std::numeric::N32::eq::eq { fn(ref(dup125(w0 @eq(w10 out)) w0) fn(ref(dup126(w3 w10) w3) out)) }
+::std::numeric::N32::eq::eq { fn(ref(dup125(w0 @n32_eq(w10 out)) w0) fn(ref(dup126(w3 w10) w3) out)) }
 
 ::lambda::Term::bind {
   fn(w0 fn(w1 _))
@@ -186,9 +186,9 @@
 
 ::lambda::Parser::parse_term::5 { x(x(w3 w3) x(w1 w1)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup194(w0 @ne(w10 out)) w0) fn(ref(dup195(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup194(w0 @n32_ne(w10 out)) w0) fn(ref(dup195(w3 w10) w3) out)) }
 
-::std::unicode::Char::eq::ne { fn(ref(dup198(w0 @ne(w10 out)) w0) fn(ref(dup199(w3 w10) w3) out)) }
+::std::unicode::Char::eq::ne { fn(ref(dup198(w0 @n32_ne(w10 out)) w0) fn(ref(dup199(w3 w10) w3) out)) }
 
 ::lambda::Parser::parse_atom {
   fn(ref(w1 w62) w59)
@@ -263,11 +263,11 @@
 
 ::lambda::Parser::parse_atom::16 {
   x(x(w10 w1) x(w8 w6))
-  ::std::unicode::String::to_string::to_string = fn(w8 tup(@add(19 w11) tup(w12 tup(96 w13))))
+  ::std::unicode::String::to_string::to_string = fn(w8 tup(@n32_add(19 w11) tup(w12 tup(96 w13))))
   ::lambda::Parser::error = fn(ref(w10 w1) fn(tup(w11 tup(tup(117 tup(110 tup(98 tup(111 tup(117 tup(110 tup(100 tup(32 tup(118 tup(97 tup(114 tup(105 tup(97 tup(98 tup(108 tup(101 tup(32 tup(96 w12)))))))))))))))))) w13)) w6))
 }
 
-::std::unicode::Char::eq::eq { fn(ref(dup280(w0 @eq(w10 out)) w0) fn(ref(dup281(w3 w10) w3) out)) }
+::std::unicode::Char::eq::eq { fn(ref(dup280(w0 @n32_eq(w10 out)) w0) fn(ref(dup281(w3 w10) w3) out)) }
 
 ::std::data::Map::get_or_insert::1 {
   fn(w1 fn(w3 fn(w4 ref(w17 w20))))
@@ -349,7 +349,7 @@
   ::std::ops::comparison::Ord::gt::1 = fn(ref(w11 w1) fn(ref(w9 w4) ?(::std::ops::comparison::Ord::Eq ::std::ops::comparison::Ord::Gt w12)))
 }
 
-::std::unicode::Char::ord::lt { fn(ref(dup457(w0 @lt(w10 out)) w0) fn(ref(dup458(w3 w10) w3) out)) }
+::std::unicode::Char::ord::lt { fn(ref(dup457(w0 @n32_lt(w10 out)) w0) fn(ref(dup458(w3 w10) w3) out)) }
 
 ::std::ops::comparison::Ord::gt::1 {
   fn(w1 fn(w4 w14))
@@ -433,7 +433,7 @@
 
 ::lambda::Parser::expect_char::8 {
   x(x(w13 w1) x(w11 _))
-  ::std::unicode::String::to_string::to_string = fn(tup(1 tup(tup(w11 w14) w14)) tup(@add(11 w15) tup(w16 tup(96 w17))))
+  ::std::unicode::String::to_string::to_string = fn(tup(1 tup(tup(w11 w14) w14)) tup(@n32_add(11 w15) tup(w16 tup(96 w17))))
   ::lambda::Parser::error = fn(ref(w13 w1) fn(tup(w15 tup(tup(101 tup(120 tup(112 tup(101 tup(99 tup(116 tup(101 tup(100 tup(32 tup(96 w16)))))))))) w17)) _))
 }
 
@@ -497,15 +497,15 @@
   ::std::numeric::N32::ord::lt = fn(w4 fn(w1 w14))
 }
 
-::std::numeric::N32::ord::lt { fn(ref(dup626(w0 @lt(w10 out)) w0) fn(ref(dup627(w3 w10) w3) out)) }
+::std::numeric::N32::ord::lt { fn(ref(dup626(w0 @n32_lt(w10 out)) w0) fn(ref(dup627(w3 w10) w3) out)) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
-::std::unicode::Char::add_n32::add { fn(@add(w1 out) fn(w1 out)) }
+::std::unicode::Char::add_n32::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::rem::rem { fn(@rem(w1 out) fn(w1 out)) }
+::std::numeric::N32::rem::rem { fn(@n32_rem(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::N32::div::div { fn(@n32_div(w1 out) fn(w1 out)) }
 
 ::std::data::List::len { fn(ref(tup(dup646(w11 w7) w8) tup(w7 w8)) w11) }
 
@@ -532,7 +532,7 @@
   ::std::numeric::N32::ord::le = fn(w4 fn(w1 w14))
 }
 
-::std::numeric::N32::ord::le { fn(ref(dup720(w0 @le(w10 out)) w0) fn(ref(dup721(w3 w10) w3) out)) }
+::std::numeric::N32::ord::le { fn(ref(dup720(w0 @n32_le(w10 out)) w0) fn(ref(dup721(w3 w10) w3) out)) }
 
 ::std::data::List::pop_front {
   fn(ref(tup(w1 tup(w3 w4)) tup(w21 tup(w19 w4))) w17)
@@ -651,7 +651,7 @@
   ::std::ops::comparison::Ord::ge::1 = fn(ref(w16 _) fn(ref(w7 w19) w21))
 }
 
-::std::numeric::N32::mul::mul { fn(@mul(w1 out) fn(w1 out)) }
+::std::numeric::N32::mul::mul { fn(@n32_mul(w1 out) fn(w1 out)) }
 
 ::std::data::Map::is_single {
   fn(ref(tup(w1 w2) tup(w15 w2)) fn(ref(tup(dup1704(w6 w17) w8) tup(w6 w8)) w20))
@@ -677,7 +677,7 @@
 
 ::std::logical::Option::unwrap::3 { enum(w0 w0) }
 
-::std::unicode::Char::ord::le { fn(ref(dup2071(w0 @le(w10 out)) w0) fn(ref(dup2072(w3 w10) w3) out)) }
+::std::unicode::Char::ord::le { fn(ref(dup2071(w0 @n32_le(w10 out)) w0) fn(ref(dup2072(w3 w10) w3) out)) }
 
 ::std::unicode::Char::is_whitespace {
   fn(w0 w19)

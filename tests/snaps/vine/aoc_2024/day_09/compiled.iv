@@ -8,10 +8,10 @@
   ::std::IO::read_line = fn(ref(w1 w6) w8)
   ::std::logical::Option::unwrap = fn(w8 dup5(w15 w23))
   ::day_09::part1 = fn(w15 w16)
-  ::std::numeric::N64::to_string::to_string = fn(w16 tup(@add(8 w28) tup(w29 w30)))
+  ::std::numeric::N64::to_string::to_string = fn(w16 tup(@n32_add(8 w28) tup(w29 w30)))
   ::std::IO::println = fn(ref(w6 w12) fn(tup(w28 tup(tup(80 tup(97 tup(114 tup(116 tup(32 tup(49 tup(58 tup(32 w29)))))))) w30)) _))
   ::day_09::part2 = fn(w23 w24)
-  ::std::numeric::N64::to_string::to_string = fn(w24 tup(@add(8 w33) tup(w34 w35)))
+  ::std::numeric::N64::to_string::to_string = fn(w24 tup(@n32_add(8 w33) tup(w34 w35)))
   ::std::IO::println = fn(ref(w12 w20) fn(tup(w33 tup(tup(80 tup(97 tup(114 tup(116 tup(32 tup(50 tup(58 tup(32 w34)))))))) w35)) _))
 }
 
@@ -55,18 +55,18 @@
   ::std::numeric::N32::eq::ne = fn(ref(w11 w1) fn(ref(w9 w4) ?(0 1 w12)))
 }
 
-::std::numeric::N32::eq::ne { fn(ref(dup52(w0 @ne(w10 out)) w0) fn(ref(dup53(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup52(w0 @n32_ne(w10 out)) w0) fn(ref(dup53(w3 w10) w3) out)) }
 
 ::std::data::List::concat::concat {
   fn(tup(w5 tup(w6 w11)) fn(tup(w10 tup(w11 w21)) tup(w18 tup(w6 w21))))
   ::std::numeric::N32::add::add = fn(w5 fn(w10 w18))
 }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
 ::std::unicode::String::from_chars::cast { fn(w0 w0) }
 
-::std::unicode::Char::add_n32::add { fn(@add(w1 out) fn(w1 out)) }
+::std::unicode::Char::add_n32::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
 ::day_09::part1 {
   fn(w0 w28)
@@ -152,17 +152,17 @@
 
 ::day_09::part1::15 { x(x(w2 w2) _) }
 
-::std::unicode::Char::sub_char::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::unicode::Char::sub_char::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
-::std::numeric::N64::add::add { fn(tup(dup(@add(bl0 l) @n32_add_high(bl1 c)) @add(bh @add(c h))) fn(tup(dup(bl0 bl1) bh) tup(l h))) }
+::std::numeric::N64::add::add { fn(tup(dup(@n32_add(bl0 l) @n32_add_high(bl1 c)) @n32_add(bh @n32_add(c h))) fn(tup(dup(bl0 bl1) bh) tup(l h))) }
 
-::std::numeric::N32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::N32::div::div { fn(@n32_div(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::mul::mul { fn(@mul(w1 out) fn(w1 out)) }
+::std::numeric::N32::mul::mul { fn(@n32_mul(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::eq::eq { fn(ref(dup216(w0 @eq(w10 out)) w0) fn(ref(dup217(w3 w10) w3) out)) }
+::std::numeric::N32::eq::eq { fn(ref(dup216(w0 @n32_eq(w10 out)) w0) fn(ref(dup217(w3 w10) w3) out)) }
 
 ::day_09::part2 {
   fn(w0 w22)
@@ -250,9 +250,9 @@
   ::std::numeric::N32::ord::lt = fn(w4 fn(w1 w14))
 }
 
-::std::numeric::N32::ord::lt { fn(ref(dup357(w0 @lt(w10 out)) w0) fn(ref(dup358(w3 w10) w3) out)) }
+::std::numeric::N32::ord::lt { fn(ref(dup357(w0 @n32_lt(w10 out)) w0) fn(ref(dup358(w3 w10) w3) out)) }
 
-::std::numeric::N32::ord::le { fn(ref(dup361(w0 @le(w10 out)) w0) fn(ref(dup362(w3 w10) w3) out)) }
+::std::numeric::N32::ord::le { fn(ref(dup361(w0 @n32_le(w10 out)) w0) fn(ref(dup362(w3 w10) w3) out)) }
 
 ::std::data::List::get {
   fn(ref(tup(w1 tup(w3 w5)) tup(w1 tup(w4 w5))) fn(w9 ref(w14 w15)))
@@ -310,7 +310,7 @@
 
 ::std::data::List::Iter::drop { fn(ref(tup(_ ref(w7 w7)) _) _) }
 
-::std::numeric::N32::rem::rem { fn(@rem(w1 out) fn(w1 out)) }
+::std::numeric::N32::rem::rem { fn(@n32_rem(w1 out) fn(w1 out)) }
 
 ::std::logical::Option::unwrap_or { fn(enum(::std::logical::Option::unwrap_or::4 enum(::std::logical::Option::unwrap_or::5 x(w1 w8))) fn(w1 w8)) }
 
@@ -333,9 +333,9 @@
 
 ::std::numeric::N32::min::3 { x(_ x(w2 w2)) }
 
-::std::numeric::N64::sub::sub { fn(tup(dup(@sub(bl0 l) @lt(bl1 c)) @sub(bh @sub(c h))) fn(tup(dup(bl0 bl1) bh) tup(l h))) }
+::std::numeric::N64::sub::sub { fn(tup(dup(@n32_sub(bl0 l) @n32_lt(bl1 c)) @n32_sub(bh @n32_sub(c h))) fn(tup(dup(bl0 bl1) bh) tup(l h))) }
 
-::std::numeric::N64::mul_n32_n32 { fn(dup(@mul(b0 l) @n32_mul_high(b1 h)) fn(dup(b0 b1) tup(l h))) }
+::std::numeric::N64::mul_n32_n32 { fn(dup(@n32_mul(b0 l) @n32_mul_high(b1 h)) fn(dup(b0 b1) tup(l h))) }
 
 ::std::numeric::N64::div_rem_n32 {
   fn(tup(w0 dup2020(w6 w11)) fn(dup2025(w7 dup2025(w10 w32)) tup(tup(w19 w38) w22)))
@@ -373,9 +373,9 @@
 
 ::std::numeric::N64::div_rem_n32::6 { x(x(w5 w5) x(_ x(_ x(w1 w1)))) }
 
-::std::unicode::Char::eq::eq { fn(ref(dup2404(w0 @eq(w10 out)) w0) fn(ref(dup2405(w3 w10) w3) out)) }
+::std::unicode::Char::eq::eq { fn(ref(dup2404(w0 @n32_eq(w10 out)) w0) fn(ref(dup2405(w3 w10) w3) out)) }
 
-::std::unicode::Char::eq::ne { fn(ref(dup2408(w0 @ne(w10 out)) w0) fn(ref(dup2409(w3 w10) w3) out)) }
+::std::unicode::Char::eq::ne { fn(ref(dup2408(w0 @n32_ne(w10 out)) w0) fn(ref(dup2409(w3 w10) w3) out)) }
 
 ::std::IO::println {
   fn(ref(w1 w12) fn(w3 _))

@@ -48,9 +48,9 @@
 
 ::sieve::main::11 { x(x(w4 w4) _) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
 ::std::numeric::N32::to_string::to_string {
   fn(w0 w10)
@@ -80,22 +80,22 @@
 
 ::std::numeric::N32::to_string::to_string::6 { x(_ x(w1 w1)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup78(w0 @ne(w10 out)) w0) fn(ref(dup79(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup78(w0 @n32_ne(w10 out)) w0) fn(ref(dup79(w3 w10) w3) out)) }
 
 ::std::data::List::concat::concat {
   fn(tup(w5 tup(w6 w11)) fn(tup(w10 tup(w11 w21)) tup(w18 tup(w6 w21))))
   ::std::numeric::N32::add::add = fn(w5 fn(w10 w18))
 }
 
-::std::unicode::Char::add_n32::add { fn(@add(w1 out) fn(w1 out)) }
+::std::unicode::Char::add_n32::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::rem::rem { fn(@rem(w1 out) fn(w1 out)) }
+::std::numeric::N32::rem::rem { fn(@n32_rem(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::N32::div::div { fn(@n32_div(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::mul::mul { fn(@mul(w1 out) fn(w1 out)) }
+::std::numeric::N32::mul::mul { fn(@n32_mul(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::ord::lt { fn(ref(dup108(w0 @lt(w10 out)) w0) fn(ref(dup109(w3 w10) w3) out)) }
+::std::numeric::N32::ord::lt { fn(ref(dup108(w0 @n32_lt(w10 out)) w0) fn(ref(dup109(w3 w10) w3) out)) }
 
 ::std::ops::comparison::Ord::gt::1 {
   fn(w1 fn(w4 w14))
@@ -109,7 +109,7 @@
   ::std::data::Array::Node::new = fn(w5 fn(w1 w7))
 }
 
-::std::numeric::N32::eq::eq { fn(ref(dup495(w0 @eq(w10 out)) w0) fn(ref(dup496(w3 w10) w3) out)) }
+::std::numeric::N32::eq::eq { fn(ref(dup495(w0 @n32_eq(w10 out)) w0) fn(ref(dup496(w3 w10) w3) out)) }
 
 ::std::data::Array::get {
   fn(ref(tup(dup557(w0 w11) w3) tup(w0 w4)) fn(w8 w14))

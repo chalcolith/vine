@@ -14,7 +14,7 @@
 ::primeness::main::2 {
   x(x(w16 w27) dup14(w0 dup14(w7 w12)))
   ::primeness = fn(w0 enum(::primeness::main::10 enum(::primeness::main::11 w24)))
-  ::std::numeric::N32::to_string::to_string = fn(w7 tup(@add(2 w17) tup(w18 tup(58 tup(32 w19)))))
+  ::std::numeric::N32::to_string::to_string = fn(w7 tup(@n32_add(2 w17) tup(w18 tup(58 tup(32 w19)))))
   ::std::data::List::concat::concat = fn(tup(w17 tup(w18 w19)) fn(w24 w10))
   ::std::IO::println = fn(ref(w16 w4) fn(w10 _))
   ::std::numeric::N32::add::add = fn(w12 fn(1 w13))
@@ -31,14 +31,14 @@
 
 ::primeness::main::11 { enum(w0 w0) }
 
-::std::numeric::N32::ord::le { fn(ref(dup29(w0 @le(w10 out)) w0) fn(ref(dup30(w3 w10) w3) out)) }
+::std::numeric::N32::ord::le { fn(ref(dup29(w0 @n32_le(w10 out)) w0) fn(ref(dup30(w3 w10) w3) out)) }
 
 ::std::data::List::concat::concat {
   fn(tup(w5 tup(w6 w11)) fn(tup(w10 tup(w11 w21)) tup(w18 tup(w6 w21))))
   ::std::numeric::N32::add::add = fn(w5 fn(w10 w18))
 }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
 ::std::numeric::N32::to_string::to_string {
   fn(w0 w10)
@@ -68,13 +68,13 @@
 
 ::std::numeric::N32::to_string::to_string::6 { x(_ x(w1 w1)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup71(w0 @ne(w10 out)) w0) fn(ref(dup72(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup71(w0 @n32_ne(w10 out)) w0) fn(ref(dup72(w3 w10) w3) out)) }
 
-::std::unicode::Char::add_n32::add { fn(@add(w1 out) fn(w1 out)) }
+::std::unicode::Char::add_n32::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::rem::rem { fn(@rem(w1 out) fn(w1 out)) }
+::std::numeric::N32::rem::rem { fn(@n32_rem(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::N32::div::div { fn(@n32_div(w1 out) fn(w1 out)) }
 
 ::primeness {
   fn(w0 w13)
@@ -117,11 +117,11 @@
   ::primeness::7 = x(w2 x(w5 w6))
 }
 
-::std::numeric::N32::eq::eq { fn(ref(dup112(w0 @eq(w10 out)) w0) fn(ref(dup113(w3 w10) w3) out)) }
+::std::numeric::N32::eq::eq { fn(ref(dup112(w0 @n32_eq(w10 out)) w0) fn(ref(dup113(w3 w10) w3) out)) }
 
-::std::numeric::N32::mul::mul { fn(@mul(w1 out) fn(w1 out)) }
+::std::numeric::N32::mul::mul { fn(@n32_mul(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
 ::std::unicode::String::to_chars::cast { fn(w0 w0) }
 

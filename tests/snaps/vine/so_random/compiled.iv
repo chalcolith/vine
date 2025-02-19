@@ -22,7 +22,7 @@
 
 ::so_random::main::3 { x(x(w3 w3) _) }
 
-::std::numeric::N32::ord::lt { fn(ref(dup20(w0 @lt(w10 out)) w0) fn(ref(dup21(w3 w10) w3) out)) }
+::std::numeric::N32::ord::lt { fn(ref(dup20(w0 @n32_lt(w10 out)) w0) fn(ref(dup21(w3 w10) w3) out)) }
 
 ::std::numeric::N32::to_string::to_string {
   fn(w0 w10)
@@ -52,22 +52,22 @@
 
 ::std::numeric::N32::to_string::to_string::6 { x(_ x(w1 w1)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup44(w0 @ne(w10 out)) w0) fn(ref(dup45(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup44(w0 @n32_ne(w10 out)) w0) fn(ref(dup45(w3 w10) w3) out)) }
 
 ::std::data::List::concat::concat {
   fn(tup(w5 tup(w6 w11)) fn(tup(w10 tup(w11 w21)) tup(w18 tup(w6 w21))))
   ::std::numeric::N32::add::add = fn(w5 fn(w10 w18))
 }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::unicode::Char::add_n32::add { fn(@add(w1 out) fn(w1 out)) }
+::std::unicode::Char::add_n32::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::rem::rem { fn(@rem(w1 out) fn(w1 out)) }
+::std::numeric::N32::rem::rem { fn(@n32_rem(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::N32::div::div { fn(@n32_div(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
 ::std::numeric::N32::or::or { fn(@n32_or(w1 out) fn(w1 out)) }
 
@@ -83,9 +83,9 @@
 
 ::std::numeric::N64::from_n32::cast { fn(w0 tup(w0 0)) }
 
-::std::numeric::N64::add::add { fn(tup(dup(@add(bl0 l) @n32_add_high(bl1 c)) @add(bh @add(c h))) fn(tup(dup(bl0 bl1) bh) tup(l h))) }
+::std::numeric::N64::add::add { fn(tup(dup(@n32_add(bl0 l) @n32_add_high(bl1 c)) @n32_add(bh @n32_add(c h))) fn(tup(dup(bl0 bl1) bh) tup(l h))) }
 
-::std::numeric::N64::mul::mul { fn(tup(dup(@mul(bl0 l) dup(@n32_mul_high(bl1 ll) @mul(bh @add(hl @add(ll h))))) ah) fn(tup(dup(bl0 dup(bl1 @mul(ah hl))) bh) tup(l h))) }
+::std::numeric::N64::mul::mul { fn(tup(dup(@n32_mul(bl0 l) dup(@n32_mul_high(bl1 ll) @n32_mul(bh @n32_add(hl @n32_add(ll h))))) ah) fn(tup(dup(bl0 dup(bl1 @n32_mul(ah hl))) bh) tup(l h))) }
 
 ::std::numeric::N64::or::or {
   fn(tup(w0 w1) fn(tup(w3 w4) tup(w10 w13)))

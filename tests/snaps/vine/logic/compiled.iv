@@ -37,9 +37,9 @@
 
 ::logic::main::4 { tup(5 tup(tup(102 tup(97 tup(108 tup(115 tup(101 w4))))) w4)) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup126(w0 @ne(w10 out)) w0) fn(ref(dup127(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup126(w0 @n32_ne(w10 out)) w0) fn(ref(dup127(w3 w10) w3) out)) }
 
 ::std::unicode::String::to_chars::cast { fn(w0 w0) }
 

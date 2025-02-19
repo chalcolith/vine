@@ -23,10 +23,10 @@
 
 ::verbose_add::9 {
   enum(dup20(w7 w10) x(dup19(w5 w9) tup(w13 tup(w14 w15))))
-  ::std::numeric::N32::to_string::to_string = fn(w5 tup(@add(6 w16) tup(w14 tup(32 tup(43 tup(32 w17))))))
-  ::std::numeric::N32::to_string::to_string = fn(w7 tup(@add(w16 w18) tup(w17 tup(32 tup(61 tup(32 w19))))))
+  ::std::numeric::N32::to_string::to_string = fn(w5 tup(@n32_add(6 w16) tup(w14 tup(32 tup(43 tup(32 w17))))))
+  ::std::numeric::N32::to_string::to_string = fn(w7 tup(@n32_add(w16 w18) tup(w17 tup(32 tup(61 tup(32 w19))))))
   ::std::numeric::N32::add::add = fn(w9 fn(w10 w11))
-  ::std::numeric::N32::to_string::to_string = fn(w11 tup(@add(w18 w13) tup(w19 w15)))
+  ::std::numeric::N32::to_string::to_string = fn(w11 tup(@n32_add(w18 w13) tup(w19 w15)))
 }
 
 ::verbose_add::10 { x(_ tup(10 tup(tup(98 tup(32 tup(119 tup(97 tup(115 tup(32 tup(110 tup(111 tup(110 tup(101 w5)))))))))) w5))) }
@@ -59,22 +59,22 @@
 
 ::std::numeric::N32::to_string::to_string::6 { x(_ x(w1 w1)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup46(w0 @ne(w10 out)) w0) fn(ref(dup47(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup46(w0 @n32_ne(w10 out)) w0) fn(ref(dup47(w3 w10) w3) out)) }
 
 ::std::data::List::concat::concat {
   fn(tup(w5 tup(w6 w11)) fn(tup(w10 tup(w11 w21)) tup(w18 tup(w6 w21))))
   ::std::numeric::N32::add::add = fn(w5 fn(w10 w18))
 }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::unicode::Char::add_n32::add { fn(@add(w1 out) fn(w1 out)) }
+::std::unicode::Char::add_n32::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::rem::rem { fn(@rem(w1 out) fn(w1 out)) }
+::std::numeric::N32::rem::rem { fn(@n32_rem(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::N32::div::div { fn(@n32_div(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
 ::std::unicode::String::to_chars::cast { fn(w0 w0) }
 

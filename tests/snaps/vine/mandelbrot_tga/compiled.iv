@@ -6,11 +6,11 @@
   ::std::numeric::F32::neg::neg = fn(+0.8 w0)
 }
 
-::std::numeric::F32::neg::neg { fn(@sub$(0 out) out) }
+::std::numeric::F32::neg::neg { fn(@f32_sub$(+0.0 out) out) }
 
-::std::numeric::F32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::F32::div::div { fn(@f32_div(w1 out) fn(w1 out)) }
 
-::std::numeric::F32::from_n32::cast { fn(@add(+0.0 out) out) }
+::std::numeric::F32::from_n32::cast { fn(@n32_to_f32(0 out) out) }
 
 ::mandelbrot_tga::main {
   fn(ref(w1 w17) _)
@@ -63,7 +63,7 @@
 
 ::std::numeric::N32::shr::shr { fn(@n32_shr(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::ord::lt { fn(ref(dup53(w0 @lt(w10 out)) w0) fn(ref(dup54(w3 w10) w3) out)) }
+::std::numeric::N32::ord::lt { fn(ref(dup53(w0 @n32_lt(w10 out)) w0) fn(ref(dup54(w3 w10) w3) out)) }
 
 ::std::ops::vectorized::sub::sub::1 {
   fn(tup(w0 w1) fn(tup(w3 w4) tup(w10 w13)))
@@ -71,9 +71,9 @@
   ::std::numeric::F32::sub::sub = fn(w1 fn(w4 w13))
 }
 
-::std::numeric::F32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::F32::sub::sub { fn(@f32_sub(w1 out) fn(w1 out)) }
 
-::std::numeric::F32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::F32::add::add { fn(@f32_add(w1 out) fn(w1 out)) }
 
 ::std::ops::vectorized::div_scalar::div::1 {
   fn(tup(w0 w1) fn(dup73(w7 w10) tup(w8 w11)))
@@ -93,9 +93,9 @@
   ::std::numeric::F32::mul::mul = fn(w1 fn(w10 w11))
 }
 
-::std::numeric::F32::mul::mul { fn(@mul(w1 out) fn(w1 out)) }
+::std::numeric::F32::mul::mul { fn(@f32_mul(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
 ::mandelbrot_tga::mandelbrot {
   fn(w0 fn(w1 w11))
@@ -130,15 +130,15 @@
 
 ::std::logical::Bool::and::and { fn(@n32_and(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::N32::div::div { fn(@n32_div(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::mul::mul { fn(@mul(w1 out) fn(w1 out)) }
+::std::numeric::N32::mul::mul { fn(@n32_mul(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup191(w0 @ne(w10 out)) w0) fn(ref(dup192(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup191(w0 @n32_ne(w10 out)) w0) fn(ref(dup192(w3 w10) w3) out)) }
 
-::std::numeric::F32::lt { fn(@lt(w1 out) fn(w1 out)) }
+::std::numeric::F32::lt { fn(@f32_lt(w1 out) fn(w1 out)) }
 
 ::std::IO::print_bytes {
   fn(ref(w1 w14) fn(tup(w7 tup(w8 _)) _))

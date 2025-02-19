@@ -6,11 +6,11 @@
   ::std::numeric::F32::neg::neg = fn(+0.8 w0)
 }
 
-::std::numeric::F32::neg::neg { fn(@sub$(0 out) out) }
+::std::numeric::F32::neg::neg { fn(@f32_sub$(+0.0 out) out) }
 
-::std::numeric::F32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::F32::div::div { fn(@f32_div(w1 out) fn(w1 out)) }
 
-::std::numeric::F32::from_n32::cast { fn(@add(+0.0 out) out) }
+::std::numeric::F32::from_n32::cast { fn(@n32_to_f32(0 out) out) }
 
 ::mandelbrot_sixel::main {
   fn(ref(w1 w19) _)
@@ -119,7 +119,7 @@
 
 ::mandelbrot_sixel::main::15 { x(x(w4 w4) 36) }
 
-::std::numeric::N32::ord::le { fn(ref(dup121(w0 @le(w10 out)) w0) fn(ref(dup122(w3 w10) w3) out)) }
+::std::numeric::N32::ord::le { fn(ref(dup121(w0 @n32_le(w10 out)) w0) fn(ref(dup122(w3 w10) w3) out)) }
 
 ::std::numeric::N32::to_string::to_string {
   fn(w0 w10)
@@ -149,22 +149,22 @@
 
 ::std::numeric::N32::to_string::to_string::6 { x(_ x(w1 w1)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup145(w0 @ne(w10 out)) w0) fn(ref(dup146(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup145(w0 @n32_ne(w10 out)) w0) fn(ref(dup146(w3 w10) w3) out)) }
 
 ::std::data::List::concat::concat {
   fn(tup(w5 tup(w6 w11)) fn(tup(w10 tup(w11 w21)) tup(w18 tup(w6 w21))))
   ::std::numeric::N32::add::add = fn(w5 fn(w10 w18))
 }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::unicode::Char::add_n32::add { fn(@add(w1 out) fn(w1 out)) }
+::std::unicode::Char::add_n32::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::rem::rem { fn(@rem(w1 out) fn(w1 out)) }
+::std::numeric::N32::rem::rem { fn(@n32_rem(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::N32::div::div { fn(@n32_div(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::ord::lt { fn(ref(dup175(w0 @lt(w10 out)) w0) fn(ref(dup176(w3 w10) w3) out)) }
+::std::numeric::N32::ord::lt { fn(ref(dup175(w0 @n32_lt(w10 out)) w0) fn(ref(dup176(w3 w10) w3) out)) }
 
 ::std::ops::vectorized::sub::sub::1 {
   fn(tup(w0 w1) fn(tup(w3 w4) tup(w10 w13)))
@@ -172,9 +172,9 @@
   ::std::numeric::F32::sub::sub = fn(w1 fn(w4 w13))
 }
 
-::std::numeric::F32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::F32::sub::sub { fn(@f32_sub(w1 out) fn(w1 out)) }
 
-::std::numeric::F32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::F32::add::add { fn(@f32_add(w1 out) fn(w1 out)) }
 
 ::std::ops::vectorized::div_scalar::div::1 {
   fn(tup(w0 w1) fn(dup195(w7 w10) tup(w8 w11)))
@@ -194,9 +194,9 @@
   ::std::numeric::F32::mul::mul = fn(w1 fn(w10 w11))
 }
 
-::std::numeric::F32::mul::mul { fn(@mul(w1 out) fn(w1 out)) }
+::std::numeric::F32::mul::mul { fn(@f32_mul(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::mul::mul { fn(@mul(w1 out) fn(w1 out)) }
+::std::numeric::N32::mul::mul { fn(@n32_mul(w1 out) fn(w1 out)) }
 
 ::std::ops::comparison::Ord::gt::1 {
   fn(w1 fn(w4 w14))
@@ -237,9 +237,9 @@
 
 ::std::logical::Bool::and::and { fn(@n32_and(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
-::std::numeric::F32::lt { fn(@lt(w1 out) fn(w1 out)) }
+::std::numeric::F32::lt { fn(@f32_lt(w1 out) fn(w1 out)) }
 
 ::std::unicode::String::to_chars::cast { fn(w0 w0) }
 

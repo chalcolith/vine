@@ -7,14 +7,14 @@
   fn(ref(w1 w30) _)
   ::std::IO::full_input = fn(ref(w1 w6) dup5(w10 w20))
   ::day_03::get_muls = fn(w10 w11)
-  ::std::numeric::N32::to_string::to_string = fn(w11 tup(@add(8 w37) tup(w38 w39)))
+  ::std::numeric::N32::to_string::to_string = fn(w11 tup(@n32_add(8 w37) tup(w38 w39)))
   ::std::IO::println = fn(ref(w6 w14) fn(tup(w37 tup(tup(80 tup(97 tup(114 tup(116 tup(32 tup(49 tup(58 tup(32 w38)))))))) w39)) _))
   ::std::unicode::String::split = fn(w20 fn(tup(4 tup(tup(100 tup(111 tup(40 tup(41 w44)))) w44)) w22))
   ::std::unicode::String::split_once = fn(w45 fn(tup(7 tup(tup(100 tup(111 tup(110 tup(39 tup(116 tup(40 tup(41 w56))))))) w56)) tup(w51 _)))
   ::std::data::List::map = fn(w22 fn(fn(w45 w51) w24))
   ::std::data::List::join = fn(w24 fn(tup(0 tup(w59 w59)) w26))
   ::day_03::get_muls = fn(w26 w27)
-  ::std::numeric::N32::to_string::to_string = fn(w27 tup(@add(8 w60) tup(w61 w62)))
+  ::std::numeric::N32::to_string::to_string = fn(w27 tup(@n32_add(8 w60) tup(w61 w62)))
   ::std::IO::println = fn(ref(w14 w30) fn(tup(w60 tup(tup(80 tup(97 tup(114 tup(116 tup(32 tup(50 tup(58 tup(32 w61)))))))) w62)) _))
 }
 
@@ -46,20 +46,20 @@
 
 ::std::numeric::N32::to_string::to_string::6 { x(_ x(w1 w1)) }
 
-::std::numeric::N32::eq::ne { fn(ref(dup34(w0 @ne(w10 out)) w0) fn(ref(dup35(w3 w10) w3) out)) }
+::std::numeric::N32::eq::ne { fn(ref(dup34(w0 @n32_ne(w10 out)) w0) fn(ref(dup35(w3 w10) w3) out)) }
 
 ::std::data::List::concat::concat {
   fn(tup(w5 tup(w6 w11)) fn(tup(w10 tup(w11 w21)) tup(w18 tup(w6 w21))))
   ::std::numeric::N32::add::add = fn(w5 fn(w10 w18))
 }
 
-::std::numeric::N32::add::add { fn(@add(w1 out) fn(w1 out)) }
+::std::numeric::N32::add::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::unicode::Char::add_n32::add { fn(@add(w1 out) fn(w1 out)) }
+::std::unicode::Char::add_n32::add { fn(@n32_add(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::rem::rem { fn(@rem(w1 out) fn(w1 out)) }
+::std::numeric::N32::rem::rem { fn(@n32_rem(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::div::div { fn(@div(w1 out) fn(w1 out)) }
+::std::numeric::N32::div::div { fn(@n32_div(w1 out) fn(w1 out)) }
 
 ::day_03::get_muls {
   fn(w0 w18)
@@ -110,16 +110,16 @@
 
 ::day_03::get_muls::25 { x(x(w3 w3) _) }
 
-::std::numeric::N32::mul::mul { fn(@mul(w1 out) fn(w1 out)) }
+::std::numeric::N32::mul::mul { fn(@n32_mul(w1 out) fn(w1 out)) }
 
-::std::numeric::N32::sub::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::numeric::N32::sub::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
 ::std::ops::comparison::Ord::ge::1 {
   fn(w1 fn(w4 w14))
   ::std::numeric::N32::ord::le = fn(w4 fn(w1 w14))
 }
 
-::std::numeric::N32::ord::le { fn(ref(dup216(w0 @le(w10 out)) w0) fn(ref(dup217(w3 w10) w3) out)) }
+::std::numeric::N32::ord::le { fn(ref(dup216(w0 @n32_le(w10 out)) w0) fn(ref(dup217(w3 w10) w3) out)) }
 
 ::std::data::List::map {
   fn(tup(dup220(w6 w22) tup(w1 _)) fn(w3 tup(w6 tup(w10 w19))))
@@ -208,7 +208,7 @@
 
 ::std::data::List::IntoIter::next::3 { x(x(w4 w4) x(x(w2 w2) ::std::logical::Option::None)) }
 
-::std::numeric::N32::eq::eq { fn(ref(dup519(w0 @eq(w10 out)) w0) fn(ref(dup520(w3 w10) w3) out)) }
+::std::numeric::N32::eq::eq { fn(ref(dup519(w0 @n32_eq(w10 out)) w0) fn(ref(dup520(w3 w10) w3) out)) }
 
 ::std::numeric::N32::parse {
   fn(w0 w15)
@@ -257,13 +257,13 @@
 
 ::std::unicode::String::to_chars::cast { fn(w0 w0) }
 
-::std::unicode::Char::ord::le { fn(ref(dup1554(w0 @le(w10 out)) w0) fn(ref(dup1555(w3 w10) w3) out)) }
+::std::unicode::Char::ord::le { fn(ref(dup1554(w0 @n32_le(w10 out)) w0) fn(ref(dup1555(w3 w10) w3) out)) }
 
-::std::unicode::Char::sub_char::sub { fn(@sub(w1 out) fn(w1 out)) }
+::std::unicode::Char::sub_char::sub { fn(@n32_sub(w1 out) fn(w1 out)) }
 
 ::std::unicode::String::from_chars::cast { fn(w0 w0) }
 
-::std::unicode::Char::eq::ne { fn(ref(dup2228(w0 @ne(w10 out)) w0) fn(ref(dup2229(w3 w10) w3) out)) }
+::std::unicode::Char::eq::ne { fn(ref(dup2228(w0 @n32_ne(w10 out)) w0) fn(ref(dup2229(w3 w10) w3) out)) }
 
 ::std::unicode::String::len { fn(ref(tup(dup2279(w0 w13) w2) tup(w0 w2)) w13) }
 
